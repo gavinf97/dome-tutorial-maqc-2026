@@ -88,3 +88,96 @@
 .assets .nt-card-title {
   font-size: 1rem;
 }
+
+/* --- Dependency-free flow diagrams (no CDN, no JS) --- */
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.5rem 0;
+  margin: 1.5rem 0;
+}
+.flow-step {
+  flex: 1 1 8.5rem;
+  min-width: 8.5rem;
+  position: relative;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-left: 3px solid var(--md-accent-fg-color);
+  border-radius: 4px;
+  background-color: var(--md-code-bg-color);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  margin-right: 1.35rem;
+}
+.flow-step:last-child {
+  margin-right: 0;
+}
+.flow-step::after {
+  content: "→";
+  position: absolute;
+  right: -1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--md-accent-fg-color);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.flow-step:last-child::after {
+  content: none;
+}
+.flow-step b {
+  display: block;
+  color: var(--md-default-fg-color);
+}
+.flow-step small {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.65rem;
+}
+.flow-step.flow-human {
+  border-left-color: var(--md-primary-fg-color);
+  background-color: var(--md-default-bg-color);
+}
+
+/* Stacked variant, for pathways rather than pipelines */
+.flow-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin: 1.5rem 0;
+}
+.flow-stack .flow-step {
+  flex: none;
+  min-width: 0;
+  margin-right: 0;
+  font-size: 0.78rem;
+}
+.flow-stack .flow-step::after {
+  content: "↓";
+  right: auto;
+  left: 1.2rem;
+  top: auto;
+  bottom: -1.15rem;
+  transform: none;
+}
+
+@media (max-width: 44rem) {
+  .flow {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .flow .flow-step {
+    margin-right: 0;
+  }
+  .flow .flow-step::after {
+    content: "↓";
+    right: auto;
+    left: 1.2rem;
+    top: auto;
+    bottom: -1.15rem;
+    transform: none;
+  }
+}

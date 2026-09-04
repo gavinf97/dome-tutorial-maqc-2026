@@ -44,17 +44,17 @@ the text you give it and returns a structured annotation. The **agentic**
 approach changes the shape of the problem — instead of one model call over one
 document, a frontier model is given **tools** and left to chain them:
 
-``` mermaid
-flowchart LR
-    A[DOI or URL] --> B[Resolve metadata<br/>CrossRef, EuropePMC, arXiv...]
-    B --> C[Fetch full text<br/>+ supplementary files]
-    C --> D[Extract text]
-    D --> E[Fill 21 DOME fields<br/>with source provenance]
-    E --> F[Inspect linked<br/>code repository]
-    F --> G[Suggest OSAI<br/>ecosystem components]
-    G --> H{Human review}
-    H --> I[Submit to<br/>DOME Registry]
-```
+<div class="flow">
+  <div class="flow-step"><b>DOI or URL</b><small>what you supply</small></div>
+  <div class="flow-step"><b>Resolve metadata</b><small>CrossRef, Europe PMC, arXiv, bioRxiv, Zenodo</small></div>
+  <div class="flow-step"><b>Fetch full text</b><small>+ supplementary files</small></div>
+  <div class="flow-step"><b>Extract text</b><small>PyMuPDF, page-marked</small></div>
+  <div class="flow-step"><b>Fill 21 DOME fields</b><small>each tagged with its source</small></div>
+  <div class="flow-step"><b>Inspect linked repo</b><small>lightweight external check</small></div>
+  <div class="flow-step"><b>Suggest OSAI components</b><small>one fix per gap</small></div>
+  <div class="flow-step flow-human"><b>Human review</b><small>required — nothing is sent without it</small></div>
+  <div class="flow-step"><b>DOME Registry</b><small>after explicit go-ahead</small></div>
+</div>
 
 Three things follow from that shape:
 

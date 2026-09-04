@@ -128,13 +128,11 @@ good intentions [@farrell2026osai].
 Rather than nine parallel obligations, OSAI groups the recommendations into
 three implementation pathways you can follow one at a time:
 
-``` mermaid
-flowchart TD
-    P1["<b>Share &amp; Reuse</b><br/>R1 · R2 · R3<br/><i>make it findable</i>"]
-    P2["<b>Reproduce &amp; Verify</b><br/>R4 · R5 · R6<br/><i>make it re-runnable</i>"]
-    P3["<b>Green AI</b><br/>R6 · R7 · R8 · R9<br/><i>make it affordable to the planet</i>"]
-    P1 --> P2 --> P3
-```
+<div class="flow-stack">
+  <div class="flow-step"><b>1 · Share &amp; Reuse — R1 · R2 · R3</b><small>Make it findable: standardised metadata, deposited in a registry, with guidance on how to deposit properly.</small></div>
+  <div class="flow-step"><b>2 · Reproduce &amp; Verify — R4 · R5 · R6</b><small>Make it re-runnable: full disclosure, portable environments, standardised benchmarks.</small></div>
+  <div class="flow-step"><b>3 · Green AI — R6 · R7 · R8 · R9</b><small>Make it affordable to the planet: efficient techniques, optimised hardware, measured and reported impact.</small></div>
+</div>
 
 Start wherever your current gap is. For most life-science groups publishing a
 model today, R1, R2 and R5 give the largest return for the least effort.

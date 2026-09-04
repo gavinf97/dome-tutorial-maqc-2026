@@ -61,14 +61,13 @@ methods using a large language model to help interpret manuscripts
 annotation as structured JSON, ready for human refinement and deposition in the
 [DOME Registry](chapter_02_registry.md).
 
-``` mermaid
-flowchart LR
-    A[Publication PDF<br/>+ supplementary] --> B[DOME Copilot]
-    D[DOI] -.optional metadata.-> B
-    B --> C[Draft DOME<br/>annotation JSON]
-    C --> E{Human review<br/>and correction}
-    E --> F[DOME Registry entry]
-```
+<div class="flow">
+  <div class="flow-step"><b>Publication PDF</b><small>+ supplementary PDFs</small></div>
+  <div class="flow-step"><b>DOME Copilot</b><small>DOI optional, for metadata</small></div>
+  <div class="flow-step"><b>Draft annotation</b><small>structured JSON</small></div>
+  <div class="flow-step flow-human"><b>Human review</b><small>read and correct every field</small></div>
+  <div class="flow-step"><b>DOME Registry entry</b><small>deposited and citable</small></div>
+</div>
 
 ### Under the hood
 
