@@ -1,0 +1,81 @@
+site_name: Publishing Reusable AI/ML Models in the Life Sciences
+site_description: >
+  MAQC2026 technical tutorial P06 — using the DOME and OSAI frameworks to report,
+  publish and reuse AI/ML methods transparently in the life sciences.
+site_url: https://gavinf97.github.io/dome-tutorial-maqc-2026/
+
+nav:
+    - About: index.md
+    - Session Assets: assets.md
+    - Course Content:
+      - "1. The DOME Standard": chapters/chapter_01_dome.md
+      - "2. The DOME Registry": chapters/chapter_02_registry.md
+      - "3. DOME Copilot": chapters/chapter_03_copilot.md
+      - "4. Open & Sustainable AI (OSAI)": chapters/chapter_04_osai.md
+      - "5. Agentic AI Skills for DOME": chapters/chapter_05_agentic.md
+      - "6. Route A — Manual via the DOME Registry": chapters/chapter_06_route_manual.md
+      - "7. Route B — DOME Copilot": chapters/chapter_07_route_copilot.md
+      - "8. Route C — Agent Skills": chapters/chapter_08_route_agent.md
+      - "References": chapters/references.md
+    - "Further Resources": follow_up_training.md
+    - "Keywords": keywords.md
+
+theme:
+  name: material
+  logo: assets/images/white-orange-logo.png
+  favicon: assets/images/elixir_favicon.ico
+  custom_dir: overrides
+  features:
+    - navigation.top
+    - navigation.footer
+    - toc.integrate
+  font:
+    text: Open Sans
+
+repo_name: gavinf97/dome-tutorial-maqc-2026
+repo_url: https://github.com/gavinf97/dome-tutorial-maqc-2026
+edit_uri: edit/main/docs/
+
+plugins:
+  - tags
+  - search
+  - bibtex:
+      bib_file: "references.bib"
+  - mkdocs-video
+
+copyright: >
+  By Gavin Farrell, University of Padua / BioComputingUP (CC BY-SA 4.0) &middot;
+  Built with the <a href="https://doi.org/10.5281/zenodo.7913092">ELIXIR Training Lesson Template</a> (CC BY-SA 4.0)
+
+markdown_extensions:
+  - abbr
+  - def_list
+  - footnotes
+  - tables
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - sane_lists
+  - smarty
+  - toc:
+      toc_depth: 3
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - neoteroi.cards
+  - addbioschemas:
+      metadata: _data/metadata.yaml
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/neoteroi-mkdocs.css
