@@ -142,7 +142,7 @@ dome-agent-skill/
 
     !!! tip "Prompt that works with any agent"
         > Follow `SKILL.md` in this repository to assess the paper at
-        > `<DOI or URL>` against the DOME standard. Use the scripts in `scripts/`
+        > `<DOI or URL>` against the DOME recommendations. Use the scripts in `scripts/`
         > for the API and file work. Show me the entry JSON and the notes summary
         > before submitting anything.
 
@@ -218,7 +218,7 @@ for it), ready for the Registry.
 !!! warning "`external:` is a finding, not a pass"
     A field the agent could only fill from a linked GitHub repository is tagged
     `external:<url>` and flagged as *not disclosed in the paper itself*. That is a
-    **DOME gap**, correctly identified — the standard assesses what the publication
+    **DOME gap**, correctly identified — the recommendations assess what the publication
     discloses. Do not quietly promote those fields to `paper`.
 
 ### Submission

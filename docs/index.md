@@ -59,7 +59,7 @@ structured way.
 
 The [DOME recommendations](chapters/chapter_01_dome.md) are the community's
 answer to that, and this tutorial is about putting them into practice — not
-just reading them. We will look at the standard itself, at the
+just reading them. We will look at the recommendations themselves, at the
 [registry](chapters/chapter_02_registry.md) that makes DOME reports findable
 and reusable, at the [tooling](chapters/chapter_03_copilot.md) that makes
 producing one tractable at scale, at the broader

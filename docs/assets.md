@@ -70,4 +70,4 @@ tutorial:
 
 ---
 
-**Next:** [Chapter 1 — The DOME Standard](chapters/chapter_01_dome.md)
+**Next:** [Chapter 1 — The DOME Recommendations](chapters/chapter_01_dome.md)

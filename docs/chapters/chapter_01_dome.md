@@ -7,7 +7,7 @@ tags:
     - Evaluation
 ---
 
-# 1. The DOME Standard
+# 1. The DOME Recommendations
 
 **Four pillars, 21 fields — a structured way to describe a supervised ML method so others can judge it.**
 
@@ -302,11 +302,8 @@ good for, and what it is not.
 
 ## Sources and further reading
 
-- **The DOME site**: <https://dome-ml.org/> — and the full checklist at [dome-ml.org/guidelines](https://dome-ml.org/guidelines)
+- **The DOME site**: <https://dome-ml.org/>
 - **The paper**: Walsh I, Fishman D, Garcia-Gasulla D, et al. *DOME: recommendations for supervised machine learning validation in biology.* Nature Methods 18, 1122–1127 (2021). [doi:10.1038/s41592-021-01205-4](https://doi.org/10.1038/s41592-021-01205-4) [@walsh2021dome]
-- **Author correction** (corrects a specificity equation): Nature Methods 18, 1409–1410 (2021). [doi:10.1038/s41592-021-01304-2](https://doi.org/10.1038/s41592-021-01304-2) [@walsh2021domecorrection]
-- **Preprint**: [arXiv:2006.16189](https://arxiv.org/abs/2006.16189)
-- **The machine-readable schema**: [BioComputingUP/dome-schema](https://github.com/BioComputingUP/dome-schema) — versioned releases (v1.0.0 free-text, v2.0.0 typed sub-fields) [@domeschema]
 
 ---
 

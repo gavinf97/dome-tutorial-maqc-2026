@@ -120,7 +120,7 @@ The four pillars in order, with what to look for and where it usually hides:
 
 ## When to choose this route
 
-**Good fit:** your own paper; you want to learn the standard properly; small
+**Good fit:** your own paper; you want to learn the recommendations properly; small
 numbers; no LLM in the loop for policy or preference reasons; maximum control
 and confidence in every field.
 

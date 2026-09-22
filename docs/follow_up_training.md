@@ -32,7 +32,7 @@ tags:
 
 - title: "AI Ecosystem"
   content: "300+ curated AI-relevant components, mapped to the OSAI recommendations."
-  url: https://dome-ml.org/ai-ecosystem
+  url: https://osai.dome-ml.org/ai-ecosystem
 
 - title: "DOME Copilot"
   content: "LLM-assisted DOME annotation. Login details are on the Session Assets page."

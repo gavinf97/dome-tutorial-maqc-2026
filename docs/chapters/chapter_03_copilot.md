@@ -38,20 +38,12 @@ tags:
 
 ## The bottleneck
 
-Manual DOME annotation is careful work. A curator reads the paper, hunts through
-supplementary material, and fills 21 fields — typically 30 to 90 minutes per
-publication, and longer for an unfamiliar subfield.
-
-Meanwhile the AI/ML life-science literature grows faster every year. The initial
-DOME Registry community curation effort retrieved **over 4,000 candidate
-articles** from Scopus, of which experts could annotate only a random subset
-[@attafi2024registry]. That gap is structural: expert curation does not scale to
-the corpus, and a registry that only ever covers a sliver of the literature
-cannot answer field-level questions about reporting quality.
-
-!!! tip "The framing that matters"
-    The goal is not to remove the human. It is to change what the human spends
-    their time on — from *transcription* to *judgement*.
+Manual DOME annotation is careful work: a curator reads the paper, hunts through
+supplementary material and fills 21 fields — typically 30 to 90 minutes per
+publication, and longer for an unfamiliar subfield. Meanwhile the AI/ML
+life-science literature grows faster every year: of the candidate articles
+identified for the DOME Registry, only a few hundred have been annotated
+manually. Expert curation alone cannot keep pace with the literature.
 
 ## What DOME Copilot does
 
@@ -108,19 +100,6 @@ predictable places:
     it looks authoritative and carries the Registry's credibility. The Registry's
     `isAiGenerated` flag exists so that provenance is recorded — it is not a
     substitute for review.
-
-## When to reach for Copilot
-
-**Good fit:** annotating many papers; building registry coverage for a subfield;
-getting a fast first pass on a paper you will then correct; no local setup
-possible; cost matters.
-
-**Less good fit:** a single high-stakes paper where you want the richest possible
-report — for that, see [Chapter 5](chapter_05_agentic.md), which gives you DOME
-*and* OSAI in one pass at higher cost per paper.
-
-The practical, click-by-click walkthrough — including the shared workshop login —
-is in **[Route B — DOME Copilot](chapter_07_route_copilot.md)**.
 
 ---
 

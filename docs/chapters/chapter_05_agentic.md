@@ -20,7 +20,6 @@ tags:
     - What does the DOME Agent Skill actually do, phase by phase?
     - How does it produce DOME *and* OSAI output in one pass?
     - What does the extra capability cost, and who can realistically access it?
-    - How much should I trust the output?
 
     **Learning Objectives**
 
@@ -29,7 +28,6 @@ tags:
     1. Explain the difference between a single-shot LLM annotation and an agentic pipeline
     2. Walk through the eight phases of the DOME Agent Skill
     3. Weigh the accuracy, cost and accessibility trade-offs against DOME Copilot
-    4. State accurately what has and has not been validated about this approach
 
     **Time:** 10 minutes
 
@@ -106,15 +104,6 @@ discloses**, not what a linked repo happens to contain. A field that could only
 be filled from GitHub is explicitly called out in the summary as *"not disclosed
 in the paper itself"* — which is a DOME finding, not a DOME pass.
 
-**Explicit anti-hallucination rules.** The skill is instructed never to invent a
-publication detail, dataset size, metric value, licence or URL; if the evidence
-is not in the API response, the paper, the supplementary files or the external
-check, the field stays `null`. It is likewise forbidden from recalling OSAI
-recommendation definitions from memory — it must read the source.
-
-**Nothing is submitted without you.** Phase 8 requires explicit human
-confirmation, and a dry run is shown first.
-
 ## The trade-off, stated plainly
 
 Neither route is simply better. They optimise for different things.
@@ -128,36 +117,7 @@ Neither route is simply better. They optimise for different things.
 | Accessibility | Web UI, nothing to install | Needs Python 3.10+, a terminal and an agent platform |
 | Scales to a corpus | **Yes** — this is its purpose | Not economically, at present |
 | Human amendments needed | More | Fewer, in practice |
-| Published benchmark | **Yes** [@farrell2026copilot] | **No** — see below |
-
-!!! tip "Choosing between them"
-    Annotating a hundred papers to build registry coverage? **Copilot.**
-    Producing the best possible report for one paper — likely your own — and you
-    want OSAI recommendations too? **The agent skill.** Neither removes the human
-    review step.
-
-## Status: what has and has not been shown
-
-!!! warning "Status: community prototype — human review is required"
-    The DOME Agent Skill is **v0.1.0**. Its helper scripts are implemented and
-    tested against live metadata APIs, but the end-to-end pipeline has **not been
-    formally validated by expert human assessment**, and the registry-submission
-    step has not yet been exercised end-to-end against the production API. There
-    is no automated test suite and no programmatic JSON Schema validation; schema
-    conformance currently relies on the agent following the shipped schema and
-    field guide. Unlike [DOME Copilot](chapter_03_copilot.md), **no published
-    benchmark exists for it yet**.
-
-    In practice, output quality with current frontier models is high — the design
-    deliberately grounds every field in retrieved evidence rather than model
-    recall. But that is a design argument, not a measurement. Every generated DOME
-    report must be **read and corrected by a human before it is submitted, cited
-    or trusted**. Treat it as an accelerator for curation, never a replacement
-    for it.
-
-This is stated deliberately, not defensively. Benchmarking an agentic pipeline
-against expert curation is exactly the kind of work the MAQC community does well
-— and it is an open invitation.
+| Published benchmark | **Yes** [@farrell2026copilot] | **No** |
 
 ---
 
@@ -166,7 +126,7 @@ against expert curation is exactly the kind of work the MAQC community does well
 - **The skill**: [gavinf97/dome-agent-skill](https://github.com/gavinf97/dome-agent-skill) — CC BY 4.0, v0.1.0 [@farrell2026skill]
 - **Install and run it**: [Route C — Agent Skills](chapter_08_route_agent.md)
 - **Agent Skills documentation**: [docs.claude.com — Agent Skills](https://docs.claude.com/en/docs/claude-code/skills)
-- **OSAI ecosystem list** (queried in Phase 7): [BioComputingUP/OSAI_ecosystem](https://github.com/BioComputingUP/OSAI_ecosystem)
+- **OSAI ecosystem list** (queried in Phase 7): [osai.dome-ml.org/ai-ecosystem](https://osai.dome-ml.org/ai-ecosystem)
 
 ---
 

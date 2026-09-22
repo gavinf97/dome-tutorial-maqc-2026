@@ -21,10 +21,10 @@ Tutorial companion site for **MAQC 2026 Technical Tutorial P06**.
 
 **Course content**
 
-1. **The DOME Standard** — four pillars, 21 fields, requirements vs recommendations
+1. **The DOME Recommendations** — four pillars, 21 fields, requirements vs recommendations
 2. **The DOME Registry** — making transparency reports findable, citable and usable in peer review
 3. **DOME Copilot** — LLM-assisted, human-in-the-loop annotation at scale
-4. **Open and Sustainable AI (OSAI)** — the nine recommendations and three pathways
+4. **Open and Sustainable AI (OSAI)** — the nine recommendations
 5. **Agentic AI Skills** — frontier-model agents that produce DOME *and* OSAI output
 
 **Hands-on: submission routes**

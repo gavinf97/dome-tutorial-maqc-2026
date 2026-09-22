@@ -20,16 +20,14 @@ tags:
     - What does OSAI cover that DOME does not?
     - What are the nine OSAI recommendations?
     - How do I go from a recommendation to something I can actually do on Monday?
-    - Why is environmental sustainability part of a reporting-standards conversation?
 
     **Learning Objectives**
 
     By the end of this chapter, you will be able to:
 
     1. Position DOME and OSAI as complementary rather than competing
-    2. Recall the three OSAI pathways and which recommendations sit in each
+    2. Recall the nine OSAI recommendations
     3. Use the OSAI ecosystem components list to find a concrete tool for a specific gap
-    4. Explain why reproducibility and sustainability are linked, not separate concerns
 
     **Time:** 10 minutes
 
@@ -116,51 +114,16 @@ good intentions [@farrell2026osai].
     You cannot manage what you do not measure. Report the compute and energy cost
     of training alongside your performance numbers.
 
-!!! info "Why sustainability belongs in this conversation"
-    The OSAI analysis links the erosion of trust in AI outputs — driven by poor
-    reusability and reproducibility — directly to environmental cost. Work that
-    cannot be reused gets *redone*: every irreproducible model is a training run
-    somebody else has to repeat. Reproducibility is a sustainability measure, not
-    a separate virtue.
-
-## The three pathways
-
-Rather than nine parallel obligations, OSAI groups the recommendations into
-three implementation pathways you can follow one at a time:
-
-<div class="flow-stack">
-  <div class="flow-step"><b>1 · Share &amp; Reuse — R1 · R2 · R3</b><small>Make it findable: standardised metadata, deposited in a registry, with guidance on how to deposit properly.</small></div>
-  <div class="flow-step"><b>2 · Reproduce &amp; Verify — R4 · R5 · R6</b><small>Make it re-runnable: full disclosure, portable environments, standardised benchmarks.</small></div>
-  <div class="flow-step"><b>3 · Green AI — R6 · R7 · R8 · R9</b><small>Make it affordable to the planet: efficient techniques, optimised hardware, measured and reported impact.</small></div>
-</div>
-
-Start wherever your current gap is. For most life-science groups publishing a
-model today, R1, R2 and R5 give the largest return for the least effort.
-
 ## Finding a tool for your gap
 
-The [**OSAI ecosystem components list**](https://github.com/BioComputingUP/OSAI_ecosystem)
+The [**OSAI ecosystem components list**](https://osai.dome-ml.org/ai-ecosystem)
 is a community-curated inventory of AI-relevant tools, registries, metadata
 standards and best-practice frameworks, each mapped to the OSAI recommendations
-it supports [@osai2025ecosystem]. It is browsable at
-[dome-ml.org/ai-ecosystem](https://dome-ml.org/ai-ecosystem).
+it supports [@osai2025ecosystem].
 
 It is also **explicitly designed for reuse** — the maintainers acknowledge there
 is no single perfect set of AI best-practice recommendations, so the list is
 built to be remapped onto other frameworks and other communities' guidance.
-
-!!! tip "This is how Route C closes the loop"
-    The [DOME Agent Skill](chapter_05_agentic.md) queries this list
-    programmatically: it takes the gaps found in your DOME assessment and suggests
-    specific ecosystem components that would close them, with the relevant OSAI
-    recommendation code attached. DOME finds the gap; OSAI supplies the fix.
-
-### Contributing a component
-
-Missing tool? Two routes, both documented in the repository:
-
-1. **Open an issue** using the *Submit a New AI Ecosystem Component* template — the recommended path
-2. **Open a pull request** editing `data/ecosystem_components_list.yml` directly
 
 ---
 
@@ -170,8 +133,7 @@ Missing tool? Two routes, both documented in the repository:
 - **The community**: the [ELIXIR AI Ecosystem Focus Group](https://elixir-europe.org/focus-groups/ai-ecosystem), successor to the [Machine Learning Focus Group](https://elixir-europe.org/focus-groups/machine-learning) that produced DOME and OSAI
 - **The paper**: Farrell G, Adamidi E, Andrade Buono R, et al. *Open and sustainable AI: challenges, opportunities and the road ahead in the life sciences.* Nature Methods (2026). [doi:10.1038/s41592-026-03037-6](https://doi.org/10.1038/s41592-026-03037-6) [@farrell2026osai]
 - **Preprint**: [arXiv:2505.16619](https://arxiv.org/abs/2505.16619) [@farrell2025osaipreprint]
-- **Ecosystem components list**: [BioComputingUP/OSAI_ecosystem](https://github.com/BioComputingUP/OSAI_ecosystem) · [doi:10.5281/zenodo.15391274](https://doi.org/10.5281/zenodo.15391274) [@osai2025ecosystem]
-- **Browse the ecosystem**: [dome-ml.org/ai-ecosystem](https://dome-ml.org/ai-ecosystem)
+- **Ecosystem components list**: [osai.dome-ml.org/ai-ecosystem](https://osai.dome-ml.org/ai-ecosystem) · [doi:10.5281/zenodo.15391274](https://doi.org/10.5281/zenodo.15391274) [@osai2025ecosystem]
 
 ---
 

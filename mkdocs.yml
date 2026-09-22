@@ -8,7 +8,7 @@ nav:
     - About: index.md
     - Session Assets: assets.md
     - Course Content:
-      - "1. The DOME Standard": chapters/chapter_01_dome.md
+      - "1. The DOME Recommendations": chapters/chapter_01_dome.md
       - "2. The DOME Registry": chapters/chapter_02_registry.md
       - "3. DOME Copilot": chapters/chapter_03_copilot.md
       - "4. Open & Sustainable AI (OSAI)": chapters/chapter_04_osai.md
