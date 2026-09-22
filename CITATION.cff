@@ -1,16 +1,21 @@
 cff-version: 1.2.0
-title: Publishing Reusable AI/ML Models in the Life Sciences (MAQC2026 Tutorial P06)
+title: Publishing Reusable AI/ML Models in the Life Sciences (MAQC 2026 Tutorial P06)
 message: If you use or adapt this tutorial, please cite it as below.
 type: dataset
 authors:
   - given-names: Gavin
     family-names: Farrell
-    orcid: https://orcid.org/0000-0002-0558-8337
+    orcid: https://orcid.org/0000-0001-5166-8551
     affiliation: BioComputingUP, University of Padua
+doi: 10.5281/zenodo.22900624
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22900624
+    description: Zenodo archive of this tutorial
 repository-code: https://github.com/gavinf97/dome-tutorial-maqc-2026
 url: https://gavinf97.github.io/dome-tutorial-maqc-2026/
 abstract: >-
-  Tutorial companion site for MAQC2026 Technical Tutorial P06, "Publishing
+  Tutorial companion site for MAQC 2026 Technical Tutorial P06, "Publishing
   Reusable AI/ML Models in the Life Sciences", held on 23 September 2026 in
   Brescia, Italy. Covers the DOME recommendations for reporting supervised
   machine learning in biology, the DOME Registry, DOME Copilot, the Open and
@@ -27,5 +32,5 @@ keywords:
   - ELIXIR
   - MAQC
 license: CC-BY-SA-4.0
-version: 1.0.0
-date-released: '2026-09-04'
+version: 1.1.0
+date-released: '2026-09-22'

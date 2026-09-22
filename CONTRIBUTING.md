@@ -58,7 +58,8 @@ Pages follow the ELIXIR Training Lesson Template conventions:
 - Every chapter opens with an `!!! overview "Overview"` block containing
   **Questions**, **Learning Objectives**, **Time** and **Prerequisites**
 - Use `=== "Tab label"` for branching content and `??? info` for collapsible detail
-- Use `:::cards cols=2 ... :::` for link card grids
+- Use `::cards:: cols=2 ... ::/cards::` for link card grids (neoteroi-mkdocs 1.2 syntax;
+  the older `:::cards` fence renders as literal text without any warning)
 - Citations go in `references.bib` and are referenced with `[@key]`
 
 ## Accuracy standards

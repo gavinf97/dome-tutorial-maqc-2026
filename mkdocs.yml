@@ -1,6 +1,6 @@
 site_name: Publishing Reusable AI/ML Models in the Life Sciences
 site_description: >
-  MAQC2026 technical tutorial P06 — using the DOME and OSAI frameworks to report,
+  MAQC 2026 technical tutorial P06 — using the DOME and OSAI frameworks to report,
   publish and reuse AI/ML methods transparently in the life sciences.
 site_url: https://gavinf97.github.io/dome-tutorial-maqc-2026/
 
@@ -13,11 +13,13 @@ nav:
       - "3. DOME Copilot": chapters/chapter_03_copilot.md
       - "4. Open & Sustainable AI (OSAI)": chapters/chapter_04_osai.md
       - "5. Agentic AI Skills for DOME": chapters/chapter_05_agentic.md
-      - "6. Route A — Manual via the DOME Registry": chapters/chapter_06_route_manual.md
-      - "7. Route B — DOME Copilot": chapters/chapter_07_route_copilot.md
-      - "8. Route C — Agent Skills": chapters/chapter_08_route_agent.md
-      - "References": chapters/references.md
+    - "Hands-on: Submission Routes":
+      - "Choosing a route": routes.md
+      - "Route A — Manual via the DOME Registry": chapters/chapter_06_route_manual.md
+      - "Route B — DOME Copilot": chapters/chapter_07_route_copilot.md
+      - "Route C — Agent Skills": chapters/chapter_08_route_agent.md
     - "Further Resources": follow_up_training.md
+    - "References": chapters/references.md
     - "Keywords": keywords.md
 
 theme:

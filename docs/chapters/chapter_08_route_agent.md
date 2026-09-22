@@ -7,7 +7,7 @@ tags:
     - installation
 ---
 
-# 8. Route C — Agent Skills
+# Route C — Agent Skills
 
 **Install the DOME Agent Skill into your agent of choice, point it at a DOI, and review what comes back.**
 
@@ -31,7 +31,7 @@ tags:
     3. Interpret the source-provenance tags on each field
     4. Understand what is required before anything is submitted to the Registry
 
-    **Time:** 25 minutes (hands-on segment)
+    **Time:** 35 minutes (hands-on exercise)
 
     **Prerequisite:** [Chapter 5](chapter_05_agentic.md) · Python 3.10+ · a terminal
 
@@ -180,7 +180,7 @@ pip install -r scripts/requirements.txt
 | Variable | When you need it |
 |---|---|
 | `GITHUB_TOKEN` | Not required. Raises the GitHub API rate limit for the external-link check in Phase 6 |
-| `DOME_REGISTRY_TOKEN` | Only for the final submission step. Log in at [registry.dome-ml.org](https://registry.dome-ml.org/) with ORCID, retrieve your JWT, then `export DOME_REGISTRY_TOKEN="..."` |
+| `DOME_REGISTRY_TOKEN` | Only for the final submission step. Log in at [registry.dome-ml.org](https://registry.dome-ml.org/) with LS Login, retrieve your JWT, then `export DOME_REGISTRY_TOKEN="..."` |
 
 !!! info "No Docker, no services"
     There is deliberately nothing to stand up. Three Python packages and a terminal.
@@ -233,20 +233,6 @@ python scripts/submit_registry.py entry.json             # actually sends it
 
 ---
 
-## Activity — for the shared document
-
-Record in the [collaborative notes document](../assets.md):
-
-1. **Which install route** you used, and whether it worked first time
-2. **The paper** you assessed (DOI)
-3. **The provenance split** — how many fields came from `paper` vs
-   `supplementary` vs `external`
-4. **The most useful OSAI suggestion** it made — and any that missed
-5. **Anything that broke.** This is a v0.1.0 prototype and honest failure reports
-   are the most valuable thing you can leave behind today
-
----
-
 ## When to choose this route
 
 **Good fit:** one paper you care about, likely your own; you want DOME **and**
@@ -268,4 +254,4 @@ context where sending the paper to a frontier model is not acceptable — use
 
 ---
 
-**Next:** [References](references.md) · [Further Resources](../follow_up_training.md)
+**Next:** [Further Resources](../follow_up_training.md)

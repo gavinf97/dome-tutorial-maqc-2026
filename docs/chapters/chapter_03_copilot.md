@@ -120,7 +120,7 @@ report — for that, see [Chapter 5](chapter_05_agentic.md), which gives you DOM
 *and* OSAI in one pass at higher cost per paper.
 
 The practical, click-by-click walkthrough — including the shared workshop login —
-is in **[Chapter 7 — Route B](chapter_07_route_copilot.md)**.
+is in **[Route B — DOME Copilot](chapter_07_route_copilot.md)**.
 
 ---
 

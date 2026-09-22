@@ -45,7 +45,7 @@ same licence.
 ## How to cite
 
 > Farrell, G. (2026). *Publishing Reusable AI/ML Models in the Life Sciences*
-> (MAQC2026 Technical Tutorial P06).
-> <https://gavinf97.github.io/dome-tutorial-maqc-2026/>
+> (MAQC 2026 Technical Tutorial P06). Zenodo.
+> <https://doi.org/10.5281/zenodo.22900624>
 
 Machine-readable metadata is in [`CITATION.cff`](./CITATION.cff).

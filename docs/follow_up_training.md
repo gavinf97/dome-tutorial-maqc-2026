@@ -1,13 +1,12 @@
 ---
 tags:
     - further resources
-    - contributing
     - community
 ---
 
 # Further Resources
 
-**Where to go after the session — and how to keep contributing.**
+**Where to go after the session.**
 
 ---
 
@@ -15,12 +14,16 @@ tags:
 
 ::cards:: cols=2
 
+- title: "Tutorial Slides"
+  content: "The full P06 slide deck, in Google Slides. Open access."
+  url: https://docs.google.com/presentation/d/1YyIH6UaMAw16p5z5xwGjAdpWyqXuT1-GMjMfYWFtFnU/edit?slide=id.g3fbb5ca46c4_0_934#slide=id.g3fbb5ca46c4_0_934
+
 - title: "DOME"
   content: "The recommendations, the full guidelines, news and the community behind them."
   url: https://dome-ml.org/
 
 - title: "DOME Registry"
-  content: "Deposit, search and cite DOME transparency reports. ORCID sign-in."
+  content: "Deposit, search and cite DOME transparency reports. LS Login sign-in."
   url: https://registry.dome-ml.org/
 
 - title: "OSAI"
@@ -51,46 +54,29 @@ tags:
 
 ## The communities
 
-| Community | What it does | Link |
-|---|---|---|
-| **ELIXIR AI Ecosystem Focus Group** | The current home for this work — successor to the ML Focus Group since October 2025 | [elixir-europe.org](https://elixir-europe.org/focus-groups/ai-ecosystem) |
-| **ELIXIR Machine Learning Focus Group** | Developed DOME and OSAI; ran 2019–2025 | [elixir-europe.org](https://elixir-europe.org/focus-groups/machine-learning) |
-| **MAQC ML Working Group** | The MAQC Society's machine learning working group | [themaqc.org/ml-working-group](https://themaqc.org/ml-working-group/) |
-| **BioComputingUP** | University of Padua group maintaining the Registry and schema | [protein.bio.unipd.it](https://protein.bio.unipd.it/) |
-| **MAQC Society** | *"Reproducibility is science. Science demands reproducibility."* | [themaqc.org](https://themaqc.org/) |
+### MAQC Society
 
-## How to contribute
+The society behind MAQC 2026 — *"Reproducibility is science. Science demands
+reproducibility."* · [themaqc.org](https://themaqc.org/)
 
-=== "Annotate a paper"
+- **[MAQC ML Working Group](https://themaqc.org/ml-working-group/)** — the
+  society's machine learning working group, and the natural home for follow-up
+  on this session
 
-    The single most useful thing: deposit a DOME entry for a paper — ideally your
-    own — in the [DOME Registry](https://registry.dome-ml.org/). Registry coverage
-    is what makes field-level questions about reporting quality answerable.
-    Curation is credited via [APICURON](https://apicuron.org/).
+### ELIXIR
 
-=== "Add an ecosystem component"
+The European life-sciences research infrastructure · [elixir-europe.org](https://elixir-europe.org/)
 
-    Know a tool that supports one of the OSAI recommendations and is not in the
-    list? Two routes, both in the
-    [OSAI_ecosystem repository](https://github.com/BioComputingUP/OSAI_ecosystem):
+- **[AI Ecosystem Focus Group](https://elixir-europe.org/focus-groups/ai-ecosystem)**
+  — the current home for this work, successor to the ML Focus Group since
+  October 2025
+- **[Machine Learning Focus Group](https://elixir-europe.org/focus-groups/machine-learning)**
+  — developed DOME and OSAI; ran 2019–2025
 
-    1. **Open an issue** with the *Submit a New AI Ecosystem Component* template — recommended
-    2. **Open a pull request** editing `data/ecosystem_components_list.yml`
+### BioComputingUP, University of Padua
 
-=== "Improve the tooling"
-
-    - **DOME Copilot** — [IFCA-Advanced-Computing/dome-copilot](https://github.com/IFCA-Advanced-Computing/dome-copilot)
-    - **DOME Agent Skill** — [gavinf97/dome-agent-skill](https://github.com/gavinf97/dome-agent-skill).
-      This is v0.1.0 and explicitly unbenchmarked; a rigorous evaluation against
-      expert human curation would be a genuinely valuable contribution
-    - **dome-schema** — [BioComputingUP/dome-schema](https://github.com/BioComputingUP/dome-schema)
-
-=== "Improve this tutorial"
-
-    Corrections and additions are welcome:
-    [gavinf97/dome-tutorial-maqc-2026](https://github.com/gavinf97/dome-tutorial-maqc-2026).
-    See `CONTRIBUTING.md` in the repository. Every page has an edit icon that takes
-    you straight to the source.
+The group maintaining the DOME Registry and dome-schema ·
+[protein.bio.unipd.it](https://protein.bio.unipd.it/)
 
 ## Related reading
 
@@ -106,15 +92,13 @@ This site is licensed
 it freely for your own training, keeping the same licence.
 
 > Farrell, G. (2026). *Publishing Reusable AI/ML Models in the Life Sciences*
-> (MAQC2026 Technical Tutorial P06).
-> <https://gavinf97.github.io/dome-tutorial-maqc-2026/>
+> (MAQC 2026 Technical Tutorial P06). Zenodo.
+> <https://doi.org/10.5281/zenodo.22900624>
 
-Machine-readable metadata:
-[`CITATION.cff`](https://github.com/gavinf97/dome-tutorial-maqc-2026/blob/main/CITATION.cff).
 Please also cite the underlying works in [References](chapters/references.md).
 
 ## Contact
 
 - **DOME / OSAI / Copilot** — <contact@dome-ml.org>
 - **This tutorial** — [open an issue](https://github.com/gavinf97/dome-tutorial-maqc-2026/issues)
-- **Tutorial lead** — Gavin Farrell, [ORCID 0000-0002-0558-8337](https://orcid.org/0000-0002-0558-8337)
+- **Tutorial lead** — Gavin Farrell, [ORCID 0000-0001-5166-8551](https://orcid.org/0000-0001-5166-8551)

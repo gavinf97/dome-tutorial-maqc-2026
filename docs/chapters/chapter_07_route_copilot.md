@@ -5,7 +5,7 @@ tags:
     - LLM-assisted
 ---
 
-# 7. Route B — DOME Copilot
+# Route B — DOME Copilot
 
 **Upload a PDF, get a structured draft in about two minutes, then review every field.**
 
@@ -28,7 +28,7 @@ tags:
     3. Identify and correct the fields most likely to need human amendment
     4. Move a reviewed annotation into the DOME Registry
 
-    **Time:** 25 minutes (hands-on segment)
+    **Time:** 35 minutes (hands-on exercise)
 
     **Prerequisite:** [Chapter 3](chapter_03_copilot.md) · a publication PDF · a browser
 
@@ -75,7 +75,7 @@ tags:
     valid — issued to `dome-copilot.ifca.es` by the GEANT/HARICA academic CA. If
     you are blocked, try a different browser or network, or use
     [Route A](chapter_06_route_manual.md) or [Route C](chapter_08_route_agent.md)
-    for the hands-on segment.
+    for the hands-on exercise.
 
 !!! info "Something not working?"
     Technical issues can be flagged to **<contact@dome-ml.org>**.
@@ -121,21 +121,6 @@ paying most attention to these:
 
 ---
 
-## Activity — for the shared document
-
-Record in the [collaborative notes document](../assets.md):
-
-1. **The paper** you ran (DOI)
-2. **How long** the annotation took end to end
-3. **How many of the 21 fields** you had to amend, and **which ones**
-4. **The single worst error** Copilot made — and, just as usefully, the field it
-   handled better than you expected
-
-That amendment count, across a room full of people and papers, is genuinely
-useful evidence about where the tooling needs work.
-
----
-
 ## When to choose this route
 
 **Good fit:** many papers; building registry coverage for a subfield; a fast
@@ -157,4 +142,4 @@ a shared instance.
 
 ---
 
-**Next:** [Chapter 8 — Route C: Agent Skills](chapter_08_route_agent.md)
+**Next:** [Route C — Agent Skills](chapter_08_route_agent.md)

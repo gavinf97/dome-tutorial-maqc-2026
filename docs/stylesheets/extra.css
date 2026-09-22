@@ -52,7 +52,7 @@
   font-size: 14px;
 }
 
-/* --- MAQC2026 tutorial additions --- */
+/* --- MAQC 2026 tutorial additions --- */
 
 /* DOME field badges (REQUIREMENT / RECOMMENDATION) */
 .badge-req,
@@ -76,7 +76,7 @@
   color: #ffffff;
 }
 
-/* Run sheet + route-comparison tables read better full width */
+/* Compact tables: run sheet, route comparison, field tables */
 .md-typeset table:not([class]) {
   font-size: 0.78rem;
 }

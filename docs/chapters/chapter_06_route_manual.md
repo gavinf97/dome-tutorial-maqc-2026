@@ -6,7 +6,7 @@ tags:
     - manual annotation
 ---
 
-# 6. Route A — Manual via the DOME Registry
+# Route A — Manual via the DOME Registry
 
 **You, the paper, and 21 fields. The slowest route, and the one that teaches you the most.**
 
@@ -24,14 +24,14 @@ tags:
 
     By the end of this chapter, you will be able to:
 
-    1. Sign in to the DOME Registry with ORCID and start an entry
+    1. Sign in to the DOME Registry with LS Login and start an entry
     2. Work through the four pillars and record what the paper does and does not report
     3. Use the DOME Wizard as a guided alternative
     4. Save a draft and submit it for review
 
-    **Time:** 25 minutes (hands-on segment)
+    **Time:** 35 minutes (hands-on exercise)
 
-    **Prerequisite:** [Chapter 1](chapter_01_dome.md) for the field definitions · an [ORCID iD](https://orcid.org/)
+    **Prerequisite:** [Chapter 1](chapter_01_dome.md) for the field definitions · an [LS Login](https://lifescience-ri.eu/ls-login/) account
 
 ---
 
@@ -53,9 +53,9 @@ tags:
     **Steps**
 
     1. Go to **<https://registry.dome-ml.org/>**
-    2. **Sign in with ORCID.** If you do not have an ORCID iD, create one at
-       [orcid.org](https://orcid.org/) — it takes about two minutes and you will
-       need it for the rest of your career anyway
+    2. **Sign in with LS Login** (Life Science Login, the European life-science
+       AAI). If you do not have an account yet, register via
+       [LS Login](https://lifescience-ri.eu/ls-login/) — ideally before the session
     3. Start a **new entry** and supply the publication's **DOI**. Bibliographic
        metadata is pulled in for you — do not retype it
     4. Work through the four pillars in order: **Data → Optimisation → Model →
@@ -118,20 +118,6 @@ The four pillars in order, with what to look for and where it usually hides:
 
 ---
 
-## Activity — for the shared document
-
-Whatever you manage in the time available, record this in the
-[collaborative notes document](../assets.md):
-
-1. **The paper** you annotated (DOI)
-2. **Your rough DOME score** out of 21 — how many fields could you fill?
-3. **The most surprising gap** — the field you expected to be reported and was not
-4. **One field you found ambiguous**, and why. These are the most useful notes
-   for the community: they point at where the standard or its guidance could be
-   sharper
-
----
-
 ## When to choose this route
 
 **Good fit:** your own paper; you want to learn the standard properly; small
@@ -145,4 +131,4 @@ annotation does not scale — which is the entire reason
 
 ---
 
-**Next:** [Chapter 7 — Route B: DOME Copilot](chapter_07_route_copilot.md)
+**Next:** [Route B — DOME Copilot](chapter_07_route_copilot.md)

@@ -47,7 +47,7 @@ The [**DOME Registry**](https://registry.dome-ml.org/) is the answer: a public,
 structured, versioned database of DOME transparency reports, described in
 *GigaScience* [@attafi2024registry]. Entries are stored as structured JSON
 against a controlled schema, given persistent identifiers, and linked to their
-publication and to the ORCID of whoever curated them.
+publication and to the curator who created them.
 
 !!! tip "The shift"
     From *"the DOME checklist is a thing you fill in once"* to *"the DOME report is
@@ -86,7 +86,7 @@ publication and to the ORCID of whoever curated them.
 
 | Feature | What it does |
 |---|---|
-| **ORCID authentication** | Sign in with your ORCID iD; curation is attributed to a real, persistent identity |
+| **LS Login authentication** | Sign in with [LS Login](https://lifescience-ri.eu/ls-login/), the European life-science AAI; curation is attributed to a real, persistent identity |
 | **Annotation wizard** | Guided, field-by-field entry following the four DOME pillars |
 | **DOME score** | Automated compliance score, **0–21**, one point per completed field |
 | **Versioned entries** | Entries can be revised; earlier versions remain interpretable against their schema version |
@@ -100,7 +100,7 @@ publication and to the ORCID of whoever curated them.
     You can annotate directly in the Registry, or work through the **DOME Wizard**
     hosted on ELIXIR's Data Stewardship Wizard at
     <https://dome.dsw.elixir-europe.org/wizard/>. Both are covered step by step in
-    [Chapter 6 — Route A](chapter_06_route_manual.md).
+    [Route A — Manual via the DOME Registry](chapter_06_route_manual.md).
 
 ## Reading a DOME score honestly
 

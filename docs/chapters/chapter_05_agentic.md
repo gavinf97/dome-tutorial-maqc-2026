@@ -164,10 +164,10 @@ against expert curation is exactly the kind of work the MAQC community does well
 ## Sources and further reading
 
 - **The skill**: [gavinf97/dome-agent-skill](https://github.com/gavinf97/dome-agent-skill) — CC BY 4.0, v0.1.0 [@farrell2026skill]
-- **Install and run it**: [Chapter 8 — Route C](chapter_08_route_agent.md)
+- **Install and run it**: [Route C — Agent Skills](chapter_08_route_agent.md)
 - **Agent Skills documentation**: [docs.claude.com — Agent Skills](https://docs.claude.com/en/docs/claude-code/skills)
 - **OSAI ecosystem list** (queried in Phase 7): [BioComputingUP/OSAI_ecosystem](https://github.com/BioComputingUP/OSAI_ecosystem)
 
 ---
 
-**Next:** [Chapter 6 — Route A: Manual via the DOME Registry](chapter_06_route_manual.md)
+**Next:** [Hands-on: Submission Routes](../routes.md)

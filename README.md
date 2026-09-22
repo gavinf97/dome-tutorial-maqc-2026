@@ -1,9 +1,10 @@
 # Publishing Reusable AI/ML Models in the Life Sciences
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-brightgreen)](https://gavinf97.github.io/dome-tutorial-maqc-2026/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22900624.svg)](https://doi.org/10.5281/zenodo.22900624)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-Tutorial companion site for **MAQC2026 Technical Tutorial P06**.
+Tutorial companion site for **MAQC 2026 Technical Tutorial P06**.
 
 **Live site: <https://gavinf97.github.io/dome-tutorial-maqc-2026/>**
 
@@ -14,19 +15,25 @@ Tutorial companion site for **MAQC2026 Technical Tutorial P06**.
 | Venue | LIGHT, University of Brescia, Brescia, Italy |
 | Session | **P06 — Publishing Reusable AI/ML Models in the Life Sciences** |
 | Slot | Wednesday 23 September, 14:00–15:30 (MAQC Technical Tutorial Day) |
-| Focus | ELIXIR ecosystem, DOME, OSAI |
 | Lead | Gavin Farrell, University of Padua / BioComputingUP |
 
 ## What the site covers
+
+**Course content**
 
 1. **The DOME Standard** — four pillars, 21 fields, requirements vs recommendations
 2. **The DOME Registry** — making transparency reports findable, citable and usable in peer review
 3. **DOME Copilot** — LLM-assisted, human-in-the-loop annotation at scale
 4. **Open and Sustainable AI (OSAI)** — the nine recommendations and three pathways
 5. **Agentic AI Skills** — frontier-model agents that produce DOME *and* OSAI output
-6. **Route A** — manual annotation via the DOME Registry and the DOME Wizard
-7. **Route B** — DOME Copilot, step by step
-8. **Route C** — the DOME Agent Skill, in Claude Code or any agentic assistant
+
+**Hands-on: submission routes**
+
+- **Route A** — manual annotation via the DOME Registry and the DOME Wizard
+- **Route B** — DOME Copilot, step by step
+- **Route C** — the DOME Agent Skill, in Claude Code or any agentic assistant
+
+**Slides:** [Google Slides deck](https://docs.google.com/presentation/d/1YyIH6UaMAw16p5z5xwGjAdpWyqXuT1-GMjMfYWFtFnU/edit?slide=id.g3fbb5ca46c4_0_934#slide=id.g3fbb5ca46c4_0_934)
 
 ## Local preview
 
@@ -56,5 +63,9 @@ which uses the same template.
 
 ## Licence
 
-[CC BY-SA 4.0](./LICENSE.md) — required by the template's ShareAlike clause. See
-[`CITATION.cff`](./CITATION.cff) for citation metadata.
+[CC BY-SA 4.0](./LICENSE.md) — required by the template's ShareAlike clause.
+
+Cite as: Farrell, G. (2026). *Publishing Reusable AI/ML Models in the Life
+Sciences* (MAQC 2026 Technical Tutorial P06). Zenodo.
+[10.5281/zenodo.22900624](https://doi.org/10.5281/zenodo.22900624). See
+[`CITATION.cff`](./CITATION.cff) for machine-readable metadata.

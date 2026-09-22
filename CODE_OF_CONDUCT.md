@@ -40,7 +40,7 @@ Examples of unacceptable behaviour:
 This Code of Conduct applies within all project spaces — the repository, its
 issues and pull requests — and also applies when an individual is officially
 representing the project in public spaces. It applies to the live tutorial
-session at MAQC2026 alongside, and in addition to, the MAQC Society's own event
+session at MAQC 2026 alongside, and in addition to, the MAQC Society's own event
 policies.
 
 ## Enforcement responsibilities
@@ -65,7 +65,7 @@ All complaints will be reviewed and investigated promptly and fairly. All
 maintainers are obliged to respect the privacy and security of the reporter of
 any incident.
 
-For conduct during the MAQC2026 meeting itself, please also refer to the
+For conduct during the MAQC 2026 meeting itself, please also refer to the
 [MAQC Society](https://themaqc.org/) event policies.
 
 ## Enforcement guidelines

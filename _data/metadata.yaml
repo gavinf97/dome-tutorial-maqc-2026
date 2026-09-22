@@ -1,22 +1,24 @@
 "@context": https://schema.org/
 "@type": LearningResource
 "@id": https://gavinf97.github.io/dome-tutorial-maqc-2026/
+identifier: https://doi.org/10.5281/zenodo.22900624
 conformsTo: https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE
 description: >
-  Tutorial companion site for MAQC2026 session P06, "Publishing Reusable AI/ML
+  Tutorial companion site for MAQC 2026 session P06, "Publishing Reusable AI/ML
   Models in the Life Sciences". Covers the DOME recommendations for reporting
   supervised machine learning in biology, the DOME Registry, DOME Copilot, the
   Open and Sustainable AI (OSAI) recommendations, and three practical routes to
   producing a DOME transparency report: manual annotation, LLM-assisted
   annotation with DOME Copilot, and agentic annotation with the DOME Agent Skill.
 keywords: DOME, OSAI, machine learning, reporting standards, transparency, reproducibility, FAIR, ELIXIR, MAQC, AI registries
-name: Publishing Reusable AI/ML Models in the Life Sciences — MAQC2026 Tutorial
+name: Publishing Reusable AI/ML Models in the Life Sciences — MAQC 2026 Tutorial
 license: CC-BY-SA-4.0
 url: https://gavinf97.github.io/dome-tutorial-maqc-2026/
 audience: Researchers, data curators, journal editors and reviewers working with AI/ML methods in the life sciences
 competencyRequired: Basic familiarity with supervised machine learning terminology
 timeRequired: PT1H30M
 inLanguage: en
-authors:
-  - name: Gavin Farrell
-    url: https://orcid.org/0000-0002-0558-8337
+author:
+  - "@type": Person
+    name: Gavin Farrell
+    url: https://orcid.org/0000-0001-5166-8551

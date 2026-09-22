@@ -2,16 +2,21 @@
 tags:
     - DOME
     - OSAI
-    - MAQC2026
+    - MAQC 2026
     - reporting standards
     - reproducibility
 ---
 
 # Publishing Reusable AI/ML Models in the Life Sciences
 
-**MAQC2026 Technical Tutorial P06 · Wednesday 23 September 2026, 14:00–15:30 · Brescia, Italy**
+**MAQC 2026 Technical Tutorial P06**
 
-Led by [Gavin Farrell](https://orcid.org/0000-0002-0558-8337), University of Padua ([BioComputingUP](https://protein.bio.unipd.it/)) · Focus: **ELIXIR ecosystem, DOME, OSAI**
+**Wednesday 23 September 2026, 14:00–15:30 · Brescia, Italy**
+
+Led by [Gavin Farrell](https://orcid.org/0000-0001-5166-8551), University of Padua ([BioComputingUP](https://protein.bio.unipd.it/))
+
+[:material-presentation-play: Open the tutorial slides](https://docs.google.com/presentation/d/1YyIH6UaMAw16p5z5xwGjAdpWyqXuT1-GMjMfYWFtFnU/edit?slide=id.g3fbb5ca46c4_0_934#slide=id.g3fbb5ca46c4_0_934){ .md-button .md-button--primary }
+[:material-toolbox: Session assets](assets.md){ .md-button }
 
 ---
 
@@ -60,71 +65,29 @@ and reusable, at the [tooling](chapters/chapter_03_copilot.md) that makes
 producing one tractable at scale, at the broader
 [Open and Sustainable AI](chapters/chapter_04_osai.md) picture, and then you
 will produce a report yourself by whichever
-[route](chapters/chapter_06_route_manual.md) suits you.
+[submission route](routes.md) suits you.
 
 ## Run sheet — the 90 minutes
 
-| Time | Segment | Page |
+| Time | Activity | Description |
 |---|---|---|
-| 14:00–14:05 | Welcome, scope, and getting the shared assets open | [Session Assets](assets.md) |
-| 14:05–14:20 | The DOME standard: four pillars, 21 fields | [Chapter 1](chapters/chapter_01_dome.md) |
-| 14:20–14:30 | The DOME Registry: findable, reusable transparency reports | [Chapter 2](chapters/chapter_02_registry.md) |
-| 14:30–14:40 | DOME Copilot: LLM-assisted, human-in-the-loop curation | [Chapter 3](chapters/chapter_03_copilot.md) |
-| 14:40–14:50 | Open and Sustainable AI: the nine recommendations | [Chapter 4](chapters/chapter_04_osai.md) |
-| 14:50–15:00 | Agentic AI skills: frontier models in the loop | [Chapter 5](chapters/chapter_05_agentic.md) |
-| 15:00–15:25 | **Hands-on** — pick a route and annotate a paper | [Ch. 6](chapters/chapter_06_route_manual.md) · [7](chapters/chapter_07_route_copilot.md) · [8](chapters/chapter_08_route_agent.md) |
-| 15:25–15:30 | Discussion, next steps, how to keep contributing | [Further Resources](follow_up_training.md) |
+| 14:00–14:10 | **Introduction** | Attendee background<br>Learning outcomes<br>Overview |
+| 14:10–14:40 | **[Slides](https://docs.google.com/presentation/d/1YyIH6UaMAw16p5z5xwGjAdpWyqXuT1-GMjMfYWFtFnU/edit?slide=id.g3fbb5ca46c4_0_934#slide=id.g3fbb5ca46c4_0_934)** | AI/ML & publishing issues<br>DOME Recommendations & Registry<br>OSAI |
+| 14:40–14:50 | **Break** | Brain rest |
+| 14:50–15:25 | **[Hands-on tutorial exercise](routes.md)** | AI/ML method reporting activity with:<br>[DOME Registry](chapters/chapter_06_route_manual.md)<br>[DOME Copilot](chapters/chapter_07_route_copilot.md)<br>[DOME Agent Skill](chapters/chapter_08_route_agent.md) |
+| 15:25–15:30 | **Wrap-up & discussion** | Final Qs |
 
-!!! tip "Do this first"
-    Open the **[Session Assets](assets.md)** page now. The slides and the shared
-    collaborative document are both linked there, and we will use the shared
-    document throughout for notes, questions and the hands-on activity.
+## About MAQC 2026
 
-## The three routes at a glance
+This tutorial is part of the **MAQC Society 2026 Annual Meeting**, *"Precision
+in a Complex World"*, held 22–26 September 2026 at LIGHT, University of Brescia,
+Italy.
 
-There is no single right way to produce a DOME transparency report. The
-hands-on segment lets you pick, and the honest trade-offs are laid out in each
-chapter.
+::cards:: cols=1
 
-| | **Route A — Manual** | **Route B — DOME Copilot** | **Route C — Agent Skill** |
-|---|---|---|---|
-| What drives it | You, reading the paper | A mid-sized LLM (Mistral Small 3.1 24B) | A frontier agent (Claude or similar) |
-| Setup needed | ORCID account | Web login, nothing installed | Python 3.10+, an agent platform |
-| Time per paper | 30–90 min | ~2 min to draft, then human review | ~5–15 min, then human review |
-| Cost | Free | Cheap, self-hostable, scales to a corpus | Higher per paper; needs model credits |
-| Covers OSAI too | No | No | Yes — DOME plus OSAI suggestions |
-| Human review | *Is* the work | **Required** | **Required** |
-| Chapter | [Chapter 6](chapters/chapter_06_route_manual.md) | [Chapter 7](chapters/chapter_07_route_copilot.md) | [Chapter 8](chapters/chapter_08_route_agent.md) |
-
-## About MAQC2026
-
-This tutorial is part of the **MAQC Society 2026 Annual Meeting**, themed
-*"Precision in a Complex World"*, held **22–26 September 2026** at **LIGHT,
-University of Brescia**, Italy. The meeting is co-organised with the
-International Human Phenome Institute (IHPI), Shanghai, under the Patronage of
-the University of Brescia. Session P06 sits on the **MAQC Technical Tutorial
-Day** (Wednesday 23 September), the second pre-conference day.
-
-The MAQC Society's tagline — *"Reproducibility is science. Science demands
-reproducibility."* — is the reason this tutorial fits the programme.
-
-::cards:: cols=2
-
-- title: "MAQC Society"
-  content: "The society behind MAQC2026, its working groups and its reproducibility mission."
-  url: https://themaqc.org/
-
-- title: "MAQC2026 Conference Page"
-  content: "Dates, venue, registration, logistics and the full programme PDF."
+- title: "MAQC 2026 Conference Page"
+  content: "Dates, venue, registration and the full programme."
   url: https://themaqc.org/conferences/
-
-- title: "MAQC2026 Full Programme (PDF)"
-  content: "The official programme. Session P06 is on page 5, Wednesday 23 September, 14:00–15:30."
-  url: http://themaqc.org/wp-content/uploads/2026/08/MAQC2026_Program_Full-2026-08-29_v1.07.pdf
-
-- title: "MAQC ML Working Group"
-  content: "The society's machine learning working group — the natural home for follow-up on this session."
-  url: https://themaqc.org/ml-working-group/
 
 ::/cards::
 
@@ -139,10 +102,9 @@ the many contributors to the DOME and OSAI initiatives.
 !!! note "How to cite this tutorial"
 
     > Farrell, G. (2026). *Publishing Reusable AI/ML Models in the Life Sciences*
-    > (MAQC2026 Technical Tutorial P06). <https://gavinf97.github.io/dome-tutorial-maqc-2026/>
+    > (MAQC 2026 Technical Tutorial P06). Zenodo.
+    > <https://doi.org/10.5281/zenodo.22900624>
 
-    Machine-readable metadata is in
-    [`CITATION.cff`](https://github.com/gavinf97/dome-tutorial-maqc-2026/blob/main/CITATION.cff).
     Please also cite the underlying works listed in [References](chapters/references.md).
 
 ??? info "Template attribution"
@@ -150,7 +112,7 @@ the many contributors to the DOME and OSAI initiatives.
     by van Geest G, Kronander E, Romero Herrera JA, Žlender N, ELIXIR Training
     Coordination Team & Cardona A (2023), DOI
     [10.5281/zenodo.7913092](https://doi.org/10.5281/zenodo.7913092), CC BY-SA 4.0.
-    Content has been replaced with the MAQC2026 tutorial material. Because the
+    Content has been replaced with the MAQC 2026 tutorial material. Because the
     template is ShareAlike, **this tutorial is also licensed
     [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**.
 
