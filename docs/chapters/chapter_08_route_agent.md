@@ -80,14 +80,29 @@ dome-agent-skill/
     [:material-open-in-new: Open Claude](https://claude.ai/){ .md-button .md-button--primary }
     [:material-download: Download the skill (ZIP)](https://github.com/gavinf97/dome-agent-skill/archive/refs/heads/main.zip){ .md-button }
 
-    **Claude Code** — one command:
+    **In Claude Code** — two commands in a session:
 
     ```
-    /plugin install dome-agent-skill --marketplace gavinf97/dome-agent-skill
+    /plugin marketplace add gavinf97/dome-agent-skill
+    /plugin install dome-agent-skill@dome-marketplace
     ```
 
-    **Claude on the web** — download the ZIP above, then add it under
-    **Settings → Skills**. Uploading your own skills needs a paid plan.
+    These are Claude Code commands; slash commands do not run in the browser chat.
+
+    **In Claude in the browser** — upload the skill once, then use it in any chat:
+
+    1. **Download the ZIP** with the button above.
+    2. **Repackage it.** Unzip, rename the folder `dome-agent-skill-main` to
+       `dome-agent-skill`, then zip that folder back up as `dome-agent-skill.zip`.
+       The zip and the folder inside it must both be named `dome-agent-skill`, or
+       Claude will not accept it.
+    3. In the message box, click **+** → **Skills** → **Manage skills**, and
+       upload the zip. (**Browse skills**, in the same menu, is the directory of
+       ready-made skills.)
+    4. Uploading your own skill needs a paid plan — Pro, Max, Team or Enterprise.
+    5. The skill now appears under **+ → Skills**. Just ask for what you want,
+       for example *"Assess this paper for DOME compliance: `<DOI>`"* — it
+       triggers on intent, with no special syntax.
 
 === "Any IDE agent session"
 
@@ -109,8 +124,6 @@ dome-agent-skill/
     > notes summary.
 
     The agent needs two abilities: **read files** and **run commands**. That is all.
-
----
 
 ---
 
