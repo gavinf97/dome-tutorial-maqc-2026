@@ -74,7 +74,7 @@ will produce a report yourself by whichever
 | 14:00–14:10 | **Introduction** | Attendee background<br>Learning outcomes<br>Overview |
 | 14:10–14:40 | **[Slides](https://docs.google.com/presentation/d/1YyIH6UaMAw16p5z5xwGjAdpWyqXuT1-GMjMfYWFtFnU/edit?slide=id.g3fbb5ca46c4_0_934#slide=id.g3fbb5ca46c4_0_934)** | AI/ML & publishing issues<br>DOME Recommendations & Registry<br>OSAI |
 | 14:40–14:50 | **Break** | Brain rest |
-| 14:50–15:25 | **[Hands-on tutorial exercise](routes.md)** | AI/ML method reporting activity with:<br>[DOME Registry](chapters/chapter_06_route_manual.md)<br>[DOME Copilot](chapters/chapter_07_route_copilot.md)<br>[DOME Agent Skill](chapters/chapter_08_route_agent.md) |
+| 14:50–15:25 | **[Hands-on tutorial exercise](routes.md)** | AI/ML method reporting activity with:<br>[DOME Wizard](chapters/chapter_06_route_manual.md)<br>[DOME Copilot](chapters/chapter_07_route_copilot.md)<br>[DOME Agent Skill](chapters/chapter_08_route_agent.md) |
 | 15:25–15:30 | **Wrap-up & discussion** | Final Qs |
 
 ## About MAQC 2026

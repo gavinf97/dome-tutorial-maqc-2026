@@ -29,7 +29,7 @@ Tutorial companion site for **MAQC 2026 Technical Tutorial P06**.
 
 **Hands-on: submission routes**
 
-- **Route A** — manual annotation via the DOME Registry and the DOME Wizard
+- **Route A** — manual annotation with the DOME Wizard
 - **Route B** — DOME Copilot, step by step
 - **Route C** — the DOME Agent Skill, in Claude Code or any agentic assistant
 

@@ -77,9 +77,6 @@ tags:
     [Route A](chapter_06_route_manual.md) or [Route C](chapter_08_route_agent.md)
     for the hands-on exercise.
 
-!!! info "Something not working?"
-    Technical issues can be flagged to **<contact@dome-ml.org>**.
-
 ---
 
 ## Now review it — this is the actual work
@@ -115,9 +112,7 @@ paying most attention to these:
     words for it before accepting the draft.
 
 !!! warning "Do not deposit an unreviewed annotation"
-    An unchecked machine-drafted entry looks authoritative and borrows the
-    Registry's credibility. The `isAiGenerated` flag records provenance — it does
-    not substitute for review.
+    Never upload an unchecked machine-drafted entry to the DOME Registry.
 
 ---
 

@@ -20,7 +20,7 @@ before anything is deposited.
 | | **Route A — Manual** | **Route B — DOME Copilot** | **Route C — Agent Skill** |
 |---|---|---|---|
 | What drives it | You, reading the paper | A mid-sized LLM (Mistral Small 3.1 24B) | A frontier agent (Claude or similar) |
-| Setup needed | An [LS Login](https://lifescience-ri.eu/ls-login/) account | Web login, nothing installed | Python 3.10+, an agent platform |
+| Setup needed | An [LS Login](https://lifescience-ri.eu/ls-login/) or DOME Wizard account | Web login, nothing installed | Python 3.10+, an agent platform |
 | Time per paper | 30–90 min | ~2 min to draft, then human review | ~5–15 min, then human review |
 | Cost | Free | Cheap, self-hostable, scales to a corpus | Higher per paper; needs model credits |
 | Covers OSAI too | No | No | Yes — DOME plus OSAI suggestions |
@@ -32,4 +32,4 @@ The tool links and the DOME Copilot shared login are on the
 
 ---
 
-**Next:** [Route A — Manual via the DOME Registry](chapters/chapter_06_route_manual.md)
+**Next:** [Route A — Manual via the DOME Wizard](chapters/chapter_06_route_manual.md)

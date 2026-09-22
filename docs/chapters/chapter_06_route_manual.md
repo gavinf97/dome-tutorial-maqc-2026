@@ -1,14 +1,13 @@
 ---
 tags:
     - hands-on
-    - DOME Registry
     - DOME Wizard
     - manual annotation
 ---
 
-# Route A — Manual via the DOME Registry
+# Route A — Manual via the DOME Wizard
 
-**You, the paper, and 21 fields. The slowest route, and the one that teaches you the most.**
+**You, the paper, and 21 fields. The slowest route, but the one that teaches you the most.**
 
 ---
 
@@ -17,89 +16,78 @@ tags:
     **Questions:**
 
     - How do I create a DOME entry by hand?
-    - What is the difference between the DOME Registry form and the DOME Wizard?
+    - Do I need an account, and how long does that take?
     - What do I do about fields the paper simply does not answer?
 
     **Learning Objectives**
 
     By the end of this chapter, you will be able to:
 
-    1. Sign in to the DOME Registry with LS Login and start an entry
-    2. Work through the four pillars and record what the paper does and does not report
-    3. Use the DOME Wizard as a guided alternative
-    4. Save a draft and submit it for review
+    1. Sign in to the DOME Wizard, with LS Login or a new account
+    2. Create a project from the DOME knowledge model
+    3. Fill in the Data and Model sections for a real paper
+    4. Record what the paper does *and does not* report, honestly
 
     **Time:** 35 minutes (hands-on exercise)
 
-    **Prerequisite:** [Chapter 1](chapter_01_dome.md) for the field definitions · an [LS Login](https://lifescience-ri.eu/ls-login/) account
+    **Prerequisite:** [Chapter 1](chapter_01_dome.md) for the field definitions · an [LS Login](https://lifescience-ri.eu/ls-login/) or DOME Wizard account
 
 ---
 
 !!! tip "Which paper should I annotate?"
     **Your own**, if you have one with a supervised ML method — you will get the
-    most out of it, and you end up with a real registry entry. Otherwise pick any
-    supervised ML paper in biology you know reasonably well. A paper you have
-    reviewed works especially well.
+    most out of it. Otherwise pick any supervised ML paper in biology you know
+    reasonably well. A paper you have reviewed works especially well.
+
+    Need one? Browse finished entries in the
+    [DOME Registry search](https://registry.dome-ml.org/search), open any entry,
+    and follow its DOI through to the paper.
 
 ---
 
-## Two ways to annotate manually
+## Annotating in the DOME Wizard
 
-=== "DOME Registry (direct)"
+The **[DOME Wizard](https://dome.dsw.elixir-europe.org/wizard/)** is the DOME
+questionnaire running on ELIXIR's Data Stewardship Wizard: a guided,
+question-by-question interview with per-question guidance, and comments and
+TODOs you can leave on individual answers.
 
-    The registry's own schema-driven form. Best if you want the entry to land
-    directly in the registry with the least indirection.
+**Steps**
 
-    **Steps**
+1. Go to **<https://dome.dsw.elixir-europe.org/wizard/>**
 
-    1. Go to **<https://registry.dome-ml.org/>**
-    2. **Sign in with LS Login** (Life Science Login, the European life-science
-       AAI). If you do not have an account yet, register via
-       [LS Login](https://lifescience-ri.eu/ls-login/) — ideally before the session
-    3. Start a **new entry** and supply the publication's **DOI**. Bibliographic
-       metadata is pulled in for you — do not retype it
-    4. Work through the four pillars in order: **Data → Optimisation → Model →
-       Evaluation**. Keep [Chapter 1](chapter_01_dome.md) open in another tab for
-       the field definitions
-    5. **Save as a draft** as you go. You do not have to finish in one sitting
-    6. When you are satisfied, **submit for review** — the entry goes to
-       moderation before appearing publicly
+2. **Sign in.** If you already have **LS Login**, use that button — it is the
+   smoothest way in. Otherwise
+   [create a DOME Wizard account](https://dome.dsw.elixir-europe.org/wizard/signup):
+   the confirmation email usually arrives within a minute or two, and you can log
+   in as soon as you have clicked the link in it.
 
-=== "DOME Wizard (ELIXIR DSW)"
+3. **Projects → Create → give it any name** (`MAQC 26 Test` is fine) **→ pick the
+   DOME knowledge model → Create.**
 
-    The DOME questionnaire hosted on ELIXIR's
-    [Data Stewardship Wizard](https://ds-wizard.org/). Best if you prefer a guided,
-    question-by-question interview with contextual help, or if your institution
-    already uses DSW for data management planning.
+4. **Pick your paper** — your own, or one you found in the Registry.
 
-    **Steps**
+5. **Fill in the `Data` section first, then `Model`**, then as much of the rest as
+   the time allows. Keep [Chapter 1](chapter_01_dome.md) open in another tab for
+   the field definitions.
 
-    1. Go to **<https://dome.dsw.elixir-europe.org/wizard/>**
-    2. Create or open a project using the **DOME** knowledge model
-    3. Answer the questions in sequence — DSW carries per-question guidance and
-       lets you leave comments and TODOs on individual answers, which is genuinely
-       useful when several people are filling it in together
-    4. Export your answers, then transfer them into a
-       [DOME Registry](https://registry.dome-ml.org/) entry for deposition
-
-    !!! info "Why two tools?"
-        DSW is a general-purpose questionnaire platform used across ELIXIR for data
-        management planning; the DOME knowledge model runs inside it. The Registry
-        is the *home* for finished DOME reports. Use whichever interface you prefer
-        to think in — the destination is the same.
+!!! info "After the session"
+    For a real annotation, the Wizard is what sends your finished entry on to the
+    [DOME Registry](chapter_02_registry.md). Today, filling it in is the exercise.
 
 ---
 
 ## Working through the fields
 
-The four pillars in order, with what to look for and where it usually hides:
+Work in this order — it follows how a paper is usually written, and the
+Optimisation fields are the fiddliest, so they are best left until last:
 
-| Pillar | Fields | Where the answers usually live |
-|---|---|---|
-| **Data** | 1.1–1.4 | Methods, "Data availability" statement, supplementary tables |
-| **Optimisation** | 2.1–2.8 | Methods, supplementary methods, the code repository's README or config files |
-| **Model** | 3.1–3.4 | Methods, "Code availability" statement, the repository itself |
-| **Evaluation** | 4.1–4.5 | Results, figures and their captions, supplementary benchmarks |
+| Pillar | Where the answers usually live |
+|---|---|
+| **Data** | Methods, "Data availability" statement, supplementary tables |
+| **Model** | Methods, "Code availability" statement, the repository itself |
+| **Evaluation** | Results, figures and their captions, supplementary benchmarks |
+| **Optimisation** | Methods, supplementary methods, the code repository's README or config files |
 
 !!! warning "Record gaps as gaps"
     When the paper does not state something, **leave the field empty** and note it.

@@ -50,8 +50,8 @@ document, a frontier model is given **tools** and left to chain them:
   <div class="flow-step"><b>Fill 21 DOME fields</b><small>each tagged with its source</small></div>
   <div class="flow-step"><b>Inspect linked repo</b><small>lightweight external check</small></div>
   <div class="flow-step"><b>Suggest OSAI components</b><small>one fix per gap</small></div>
-  <div class="flow-step flow-human"><b>Human review</b><small>required — nothing is sent without it</small></div>
-  <div class="flow-step"><b>DOME Registry</b><small>after explicit go-ahead</small></div>
+  <div class="flow-step flow-human"><b>Human review</b><small>required — you correct every field</small></div>
+  <div class="flow-step"><b>DOME Registry</b><small>submission not enabled yet</small></div>
 </div>
 
 Three things follow from that shape:
@@ -88,7 +88,7 @@ Python CLIs; the DOME field extraction is done by the agent reading the paper.
 | 5 | **Fill 21 DOME fields** | The agent reads the text and fills the schema, guided by a per-field extraction guide |
 | 6 | **External check** | `inspect_external_link.py` — one API call plus README for a linked repo. Deliberately lightweight: no cloning, no walking the file tree |
 | 7 | **Notes & compliance summary** | Provenance breakdown, remaining gaps, and OSAI-grounded improvement suggestions via `suggest_osai_components.py` |
-| 8 | **Human review & submit** | The full entry and summary are presented for correction. `submit_registry.py --dry-run` first, always |
+| 8 | **Human review** | The full entry and summary are presented for correction. Submission to the Registry is not enabled |
 
 ### What makes the output trustworthy
 

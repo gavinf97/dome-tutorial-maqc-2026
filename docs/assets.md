@@ -27,11 +27,11 @@ tags:
 ::cards:: cols=2
 
 - title: "DOME Registry"
-  content: "The public registry of DOME transparency reports. Used in Route A. LS Login sign-in."
+  content: "The public registry of DOME transparency reports — browse finished entries here. LS Login sign-in."
   url: https://registry.dome-ml.org/
 
 - title: "DOME Wizard (Data Stewardship Wizard)"
-  content: "The ELIXIR DSW-hosted DOME questionnaire — a guided, question-by-question alternative for Route A."
+  content: "The ELIXIR-hosted DOME questionnaire — guided, question by question. Used in Route A."
   url: https://dome.dsw.elixir-europe.org/wizard/
 
 - title: "DOME Copilot"

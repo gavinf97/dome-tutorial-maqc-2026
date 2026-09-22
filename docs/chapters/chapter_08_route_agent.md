@@ -29,7 +29,7 @@ tags:
     1. Install the skill by whichever route fits your setup
     2. Run a DOME assessment from a DOI and read the resulting entry plus summary
     3. Interpret the source-provenance tags on each field
-    4. Understand what is required before anything is submitted to the Registry
+    4. Know what the skill does not yet do
 
     **Time:** 35 minutes (hands-on exercise)
 
@@ -37,19 +37,10 @@ tags:
 
 ---
 
-!!! warning "Status: community prototype — human review is required"
-    The DOME Agent Skill is **v0.1.0**. Its helper scripts are implemented and
-    tested against live metadata APIs, but the end-to-end pipeline has **not been
-    formally validated by expert human assessment**, and the registry-submission
-    step has not yet been exercised end-to-end against the production API. There
-    is no automated test suite and no programmatic JSON Schema validation. Unlike
-    [DOME Copilot](chapter_03_copilot.md), **no published benchmark exists for it
-    yet**.
-
-    Output quality with current frontier models is high in practice, but every
-    generated DOME report must be **read and corrected by a human before it is
-    submitted, cited or trusted**. Treat it as an accelerator for curation, never
-    a replacement for it.
+!!! warning "Prototype — v0.1.0"
+    Not yet benchmarked or validated. Frontier models give promising results and
+    more capability than [DOME Copilot](chapter_03_copilot.md), but read and
+    correct every field before you use the output.
 
 ---
 
@@ -75,52 +66,34 @@ dome-agent-skill/
 └── .claude-plugin/           # plugin + marketplace manifests
 ```
 
-!!! tip "It is not Claude-specific"
-    `SKILL.md` is **plain Markdown** and the scripts are **plain Python CLIs that
-    print JSON to stdout**. Nothing in the pipeline requires a particular vendor.
-    Any agentic platform that can read a file and run a shell command can follow
-    it — the Claude Code path below is simply the one with a one-command installer.
+!!! tip "Not just for Claude"
+    `SKILL.md` is ordinary Markdown: a set of instructions any capable agent can
+    read and follow. The helper scripts return their results in **JSON format**,
+    which any agent can work with. Claude is simply the quickest to set up.
 
 ---
 
 ## Install
 
-=== "Claude Code — fastest"
+=== "Claude"
 
-    Two commands inside a Claude Code session:
+    [:material-open-in-new: Open Claude](https://claude.ai/){ .md-button .md-button--primary }
+    [:material-download: Download the skill (ZIP)](https://github.com/gavinf97/dome-agent-skill/archive/refs/heads/main.zip){ .md-button }
+
+    **Claude Code** — one command:
 
     ```
-    /plugin marketplace add gavinf97/dome-agent-skill
-    /plugin install dome-agent-skill@dome-marketplace
+    /plugin install dome-agent-skill --marketplace gavinf97/dome-agent-skill
     ```
 
-    The repository is a self-hosted plugin marketplace, so this is the shareable
-    path — anyone can run these two commands, no manual file placement needed.
+    **Claude on the web** — download the ZIP above, then add it under
+    **Settings → Skills**. Uploading your own skills needs a paid plan.
 
-=== "Manual — any Claude session"
+=== "Any IDE agent session"
 
-    Clone the repository into your skills directory:
-
-    ```bash
-    # Personal — available in every project:
-    git clone https://github.com/gavinf97/dome-agent-skill.git \
-      ~/.claude/skills/dome-agent-skill
-
-    # Or project-scoped — available only inside one project:
-    git clone https://github.com/gavinf97/dome-agent-skill.git \
-      <your-project>/.claude/skills/dome-agent-skill
-    ```
-
-    !!! info "Local installs are local"
-        A skill placed in `~/.claude/skills/` or `<project>/.claude/skills/` is
-        discoverable only by you on that machine — it is **not** visible to anyone
-        else, even though the repository is public. Use the marketplace path above
-        to actually share it with colleagues.
-
-=== "VS Code — Gemini, GitHub Copilot, ChatGPT/Codex"
-
-    Any agentic coding assistant in VS Code (or a similar editor) can run this.
-    Clone the repository somewhere in your workspace:
+    An **IDE** (integrated development environment) is the editor you write code
+    in, such as VS Code. The agent built into it — GitHub Copilot, Gemini Code
+    Assist, ChatGPT/Codex — can run this too.
 
     ```bash
     git clone https://github.com/gavinf97/dome-agent-skill.git
@@ -128,44 +101,20 @@ dome-agent-skill/
     pip install -r scripts/requirements.txt
     ```
 
-    Then wire it to your agent:
+    Then point the agent at the instructions:
 
-    | Agent | How to connect it |
-    |---|---|
-    | **Gemini Code Assist / Gemini CLI** | Add `SKILL.md` as context, or copy its content into `GEMINI.md` in your workspace root |
-    | **GitHub Copilot (VS Code, agent mode)** | Copy `SKILL.md` into `.github/copilot-instructions.md`, or attach it as context in Copilot Chat |
-    | **ChatGPT / Codex** | Add `SKILL.md` as `AGENTS.md` in the repository root, or paste it into a project's custom instructions |
-    | **Any other agent** | Tell it: *"Follow the instructions in `SKILL.md`. The scripts in `scripts/` are your tools."* |
+    > Follow `SKILL.md` in this repository to assess the paper at
+    > `<DOI or URL>` against the DOME recommendations. Use the scripts in
+    > `scripts/` for the lookups and file handling. Show me the entry and the
+    > notes summary.
 
-    The agent needs two abilities: **read files** and **run shell commands**. That
-    is all.
-
-    !!! tip "Prompt that works with any agent"
-        > Follow `SKILL.md` in this repository to assess the paper at
-        > `<DOI or URL>` against the DOME recommendations. Use the scripts in `scripts/`
-        > for the API and file work. Show me the entry JSON and the notes summary
-        > before submitting anything.
-
-=== "Scripts only — no agent"
-
-    The six CLIs are usable directly if you would rather do the field extraction
-    yourself:
-
-    ```bash
-    python scripts/resolve_publication.py "10.1038/s41592-021-01205-4"
-    python scripts/fetch_fulltext.py --outdir work --pmcid PMC8340003 --doi 10.1038/s41592-021-01205-4
-    python scripts/extract_pdf_text.py work/supp_1.pdf --out work/supp_1.txt
-    python scripts/inspect_external_link.py "https://github.com/BioComputingUP/dome-registry"
-    python scripts/suggest_osai_components.py "no containerised environment" --top 3
-    python scripts/submit_registry.py entry.json --dry-run
-    ```
-
-    Each prints JSON to stdout and logs to stderr, so they compose cleanly into
-    your own pipeline.
+    The agent needs two abilities: **read files** and **run commands**. That is all.
 
 ---
 
-## Setup — needed for every route above
+---
+
+## Setup
 
 ```bash
 # Python 3.10 or newer
@@ -175,12 +124,8 @@ python3 --version
 pip install -r scripts/requirements.txt
 ```
 
-### Optional environment variables
-
-| Variable | When you need it |
-|---|---|
-| `GITHUB_TOKEN` | Not required. Raises the GitHub API rate limit for the external-link check in Phase 6 |
-| `DOME_REGISTRY_TOKEN` | Only for the final submission step. Log in at [registry.dome-ml.org](https://registry.dome-ml.org/) with LS Login, retrieve your JWT, then `export DOME_REGISTRY_TOKEN="..."` |
+Optionally, set `GITHUB_TOKEN` to raise the GitHub API rate limit for the
+external-link check in Phase 6. It is not required.
 
 !!! info "No Docker, no services"
     There is deliberately nothing to stand up. Three Python packages and a terminal.
@@ -223,13 +168,9 @@ for it), ready for the Registry.
 
 ### Submission
 
-Nothing is submitted without you. Phase 8 requires explicit confirmation, and a
-dry run comes first:
-
-```bash
-python scripts/submit_registry.py entry.json --dry-run   # shows exactly what would be sent
-python scripts/submit_registry.py entry.json             # actually sends it
-```
+Submitting straight to the DOME Registry is **not enabled**. Review the output
+and take it forward yourself. A connection may follow once the approach is
+validated, but that is not confirmed.
 
 ---
 

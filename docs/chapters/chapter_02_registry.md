@@ -84,7 +84,6 @@ publication and to the curator who created them.
 | Feature | What it does |
 |---|---|
 | **LS Login authentication** | Sign in with [LS Login](https://lifescience-ri.eu/ls-login/), the European life-science AAI; curation is attributed to a real, persistent identity |
-| **Annotation wizard** | Guided, field-by-field entry following the four DOME pillars |
 | **DOME score** | Automated compliance score, **0–21**, one point per completed field |
 | **Versioned entries** | Entries can be revised; earlier versions remain interpretable against their schema version |
 | **Moderation workflow** | Drafts can be submitted for review before appearing publicly |

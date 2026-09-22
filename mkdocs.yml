@@ -15,7 +15,7 @@ nav:
       - "5. Agentic AI Skills for DOME": chapters/chapter_05_agentic.md
     - "Hands-on: Submission Routes":
       - "Choosing a route": routes.md
-      - "Route A — Manual via the DOME Registry": chapters/chapter_06_route_manual.md
+      - "Route A — Manual via the DOME Wizard": chapters/chapter_06_route_manual.md
       - "Route B — DOME Copilot": chapters/chapter_07_route_copilot.md
       - "Route C — Agent Skills": chapters/chapter_08_route_agent.md
     - "Further Resources": follow_up_training.md
