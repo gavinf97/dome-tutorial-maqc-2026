@@ -78,7 +78,7 @@ dome-agent-skill/
 === "Claude"
 
     [:material-open-in-new: Open Claude](https://claude.ai/){ .md-button .md-button--primary }
-    [:material-download: Download the skill (ZIP)](https://github.com/gavinf97/dome-agent-skill/archive/refs/heads/main.zip){ .md-button }
+    [:material-download: Download the skill (ZIP)](https://drive.google.com/uc?export=download&id=1gjty4sXAmGvopaLaw4MnRm0UNneMc8Ee){ .md-button }
 
     **In Claude Code** — two commands in a session:
 
@@ -91,16 +91,13 @@ dome-agent-skill/
 
     **In Claude in the browser** — upload the skill once, then use it in any chat:
 
-    1. **Download the ZIP** with the button above.
-    2. **Repackage it.** Unzip, rename the folder `dome-agent-skill-main` to
-       `dome-agent-skill`, then zip that folder back up as `dome-agent-skill.zip`.
-       The zip and the folder inside it must both be named `dome-agent-skill`, or
-       Claude will not accept it.
-    3. In the message box, click **+** → **Skills** → **Manage skills**, and
-       upload the zip. (**Browse skills**, in the same menu, is the directory of
-       ready-made skills.)
-    4. Uploading your own skill needs a paid plan — Pro, Max, Team or Enterprise.
-    5. The skill now appears under **+ → Skills**. Just ask for what you want,
+    1. **Download the skill** with the button above. It is already packaged the
+       way Claude expects — nothing to unzip, nothing to rename.
+    2. In the message box, click **+** → **Skills** → **Manage skills**, and
+       upload `dome-agent-skill.zip`. (**Browse skills**, in the same menu, is the
+       directory of ready-made skills.)
+    3. Uploading your own skill needs a paid plan — Pro, Max, Team or Enterprise.
+    4. The skill now appears under **+ → Skills**. Just ask for what you want,
        for example *"Assess this paper for DOME compliance: `<DOI>`"* — it
        triggers on intent, with no special syntax.
 
