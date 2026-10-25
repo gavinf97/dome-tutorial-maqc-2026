@@ -1,0 +1,183 @@
+:root > * {
+  --md-primary-fg-color:        #023452;
+  --md-accent-fg-color:         #F47D20;
+  --md-typeset-a-color:         #0D99D6;
+  --md-admonition-icon--overview: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 12a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"/><path d="M12 3.5c3.432 0 6.124 1.534 8.054 3.241 1.926 1.703 3.132 3.61 3.616 4.46a1.6 1.6 0 0 1 0 1.598c-.484.85-1.69 2.757-3.616 4.461-1.929 1.706-4.622 3.24-8.054 3.24-3.432 0-6.124-1.534-8.054-3.24C2.02 15.558.814 13.65.33 12.8a1.6 1.6 0 0 1 0-1.598c.484-.85 1.69-2.757 3.616-4.462C5.875 5.034 8.568 3.5 12 3.5ZM1.633 11.945a.115.115 0 0 0-.017.055c.001.02.006.039.017.056.441.774 1.551 2.527 3.307 4.08C6.691 17.685 9.045 19 12 19c2.955 0 5.31-1.315 7.06-2.864 1.756-1.553 2.866-3.306 3.307-4.08a.111.111 0 0 0 .017-.056.111.111 0 0 0-.017-.056c-.441-.773-1.551-2.527-3.307-4.08C17.309 6.315 14.955 5 12 5 9.045 5 6.69 6.314 4.94 7.865c-1.756 1.552-2.866 3.306-3.307 4.08Z"/></svg>')
+}
+
+.nt-card {
+    text-align: center;
+}
+
+.authors .nt-card-text {
+    font-size:20px;
+}
+
+.contributors .nt-card .nt-card-image img {
+    height: 60px;
+}
+
+.contributors .nt-card .nt-card-image {
+    min-height: 60px;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 18px;
+}
+
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+  fill: currentcolor;
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+.md-typeset .admonition.overview,
+.md-typeset details.overview {
+  border-color: rgb(77, 77, 77);
+}
+.md-typeset .overview > .admonition-title,
+.md-typeset .overview > summary {
+  background-color: rgba(77, 77, 77, 0.1);
+}
+.md-typeset .overview > .admonition-title::before,
+.md-typeset .overview > summary::before {
+  background-color: rgb(77, 77, 77);
+  -webkit-mask-image: var(--md-admonition-icon--overview);
+          mask-image: var(--md-admonition-icon--overview);
+}
+
+.md-typeset .overview {
+  font-size: 14px;
+}
+
+/* --- MAQC 2026 tutorial additions --- */
+
+/* DOME field badges (REQUIREMENT / RECOMMENDATION) */
+.badge-req,
+.badge-rec {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.badge-req {
+  background-color: #F47D20;
+  color: #ffffff;
+}
+.badge-rec {
+  background-color: #023452;
+  color: #ffffff;
+}
+
+/* Compact tables: run sheet, route comparison, field tables */
+.md-typeset table:not([class]) {
+  font-size: 0.78rem;
+}
+
+/* Session-asset cards */
+.nt-card {
+  text-align: left;
+}
+.assets .nt-card-title {
+  font-size: 1rem;
+}
+
+/* --- Dependency-free flow diagrams (no CDN, no JS) --- */
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.5rem 0;
+  margin: 1.5rem 0;
+}
+.flow-step {
+  flex: 1 1 8.5rem;
+  min-width: 8.5rem;
+  position: relative;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-left: 3px solid var(--md-accent-fg-color);
+  border-radius: 4px;
+  background-color: var(--md-code-bg-color);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  margin-right: 1.35rem;
+}
+.flow-step:last-child {
+  margin-right: 0;
+}
+.flow-step::after {
+  content: "→";
+  position: absolute;
+  right: -1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--md-accent-fg-color);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.flow-step:last-child::after {
+  content: none;
+}
+.flow-step b {
+  display: block;
+  color: var(--md-default-fg-color);
+}
+.flow-step small {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.65rem;
+}
+.flow-step.flow-human {
+  border-left-color: var(--md-primary-fg-color);
+  background-color: var(--md-default-bg-color);
+}
+
+/* Stacked variant, for pathways rather than pipelines */
+.flow-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin: 1.5rem 0;
+}
+.flow-stack .flow-step {
+  flex: none;
+  min-width: 0;
+  margin-right: 0;
+  font-size: 0.78rem;
+}
+.flow-stack .flow-step::after {
+  content: "↓";
+  right: auto;
+  left: 1.2rem;
+  top: auto;
+  bottom: -1.15rem;
+  transform: none;
+}
+
+@media (max-width: 44rem) {
+  .flow {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .flow .flow-step {
+    margin-right: 0;
+  }
+  .flow .flow-step::after {
+    content: "↓";
+    right: auto;
+    left: 1.2rem;
+    top: auto;
+    bottom: -1.15rem;
+    transform: none;
+  }
+}
