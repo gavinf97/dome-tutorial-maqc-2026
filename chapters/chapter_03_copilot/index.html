@@ -1,0 +1,1120 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MAQC 2026 technical tutorial P06 — using the DOME and OSAI frameworks to report, publish and reuse AI/ML methods transparently in the life sciences.
+">
+      
+      
+      
+        <link rel="canonical" href="https://gavinf97.github.io/dome-tutorial-maqc-2026/chapters/chapter_03_copilot/">
+      
+      
+        <link rel="prev" href="../chapter_02_registry/">
+      
+      
+        <link rel="next" href="../chapter_04_osai/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/elixir_favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>3. DOME Copilot - Publishing Reusable AI/ML Models in the Life Sciences</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/neoteroi-mkdocs.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-dome-copilot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Publishing Reusable AI/ML Models in the Life Sciences" class="md-header__button md-logo" aria-label="Publishing Reusable AI/ML Models in the Life Sciences" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Publishing Reusable AI/ML Models in the Life Sciences
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. DOME Copilot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gavinf97/dome-tutorial-maqc-2026" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gavinf97/dome-tutorial-maqc-2026
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Publishing Reusable AI/ML Models in the Life Sciences" class="md-nav__button md-logo" aria-label="Publishing Reusable AI/ML Models in the Life Sciences" data-md-component="logo">
+      
+  <img src="../../assets/images/white-orange-logo.png" alt="logo">
+
+    </a>
+    Publishing Reusable AI/ML Models in the Life Sciences
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gavinf97/dome-tutorial-maqc-2026" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gavinf97/dome-tutorial-maqc-2026
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session Assets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Content
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course Content
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_01_dome/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. The DOME Recommendations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_02_registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. The DOME Registry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. DOME Copilot
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. DOME Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-bottleneck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The bottleneck
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-dome-copilot-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What DOME Copilot does
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What DOME Copilot does">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#under-the-hood" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Under the hood
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-humans-stay-in-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where humans stay in the loop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources-and-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources and further reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_04_osai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Open & Sustainable AI (OSAI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_05_agentic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Agentic AI Skills for DOME
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-on: Submission Routes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hands-on: Submission Routes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choosing a route
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_06_route_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Route A — Manual via the DOME Wizard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_07_route_copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Route B — DOME Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_08_route_agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Route C — Agent Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../follow_up_training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Further Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../keywords/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keywords
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../keywords/#tag:dome-copilot" class="md-tag">DOME Copilot</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../keywords/#tag:llm" class="md-tag">LLM</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../keywords/#tag:curation" class="md-tag">curation</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../keywords/#tag:human-in-the-loop" class="md-tag">human-in-the-loop</a>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<div><h1 id="3-dome-copilot">3. DOME Copilot</h1>
+<p><strong>PDF in, structured draft DOME report out — in about two minutes. Then a human reviews it.</strong></p>
+<hr>
+<div class="admonition overview">
+<p class="admonition-title">Overview</p>
+<p><strong>Questions:</strong></p>
+<ul>
+<li>Why does DOME curation need accelerating at all?</li>
+<li>What does DOME Copilot actually do, and what model is behind it?</li>
+<li>How good are its annotations compared to expert human curation?</li>
+<li>Where does the human stay in the loop, and why is that not negotiable?</li>
+</ul>
+<p><strong>Learning Objectives</strong></p>
+<p>By the end of this chapter, you will be able to:</p>
+<ol>
+<li>Explain the curation bottleneck that motivates automated DOME annotation</li>
+<li>Describe the Copilot pipeline from PDF submission to downloadable JSON</li>
+<li>Interpret the reported benchmark results, including their limits</li>
+<li>Identify which DOME fields need the most careful human checking</li>
+</ol>
+<p><strong>Time:</strong> 10 minutes</p>
+<p><strong>Prerequisite:</strong> <a href="../chapter_01_dome/">Chapter 1</a> and <a href="../chapter_02_registry/">Chapter 2</a></p>
+</div>
+<hr>
+<h2 id="the-bottleneck">The bottleneck</h2>
+<p>Manual DOME annotation is careful work: a curator reads the paper, hunts through
+supplementary material and fills 21 fields — typically 30 to 90 minutes per
+publication, and longer for an unfamiliar subfield. Meanwhile the AI/ML
+life-science literature grows faster every year: of the candidate articles
+identified for the DOME Registry, only a few hundred have been annotated
+manually. Expert curation alone cannot keep pace with the literature.</p>
+<h2 id="what-dome-copilot-does">What DOME Copilot does</h2>
+<p><a href="https://dome-copilot.ifca.es/">DOME Copilot</a> extracts structured reports of AI
+methods using a large language model to help interpret manuscripts
+<sup id="fnref:farrell2026copilot"><a class="footnote-ref" href="#fn:farrell2026copilot">1</a></sup>. You give it a publication PDF; it returns a draft DOME
+annotation as structured JSON, ready for human refinement and deposition in the
+<a href="../chapter_02_registry/">DOME Registry</a>.</p>
+<div class="flow">
+  <div class="flow-step"><b>Publication PDF</b><small>+ supplementary PDFs</small></div>
+  <div class="flow-step"><b>DOME Copilot</b><small>DOI optional, for metadata</small></div>
+  <div class="flow-step"><b>Draft annotation</b><small>structured JSON</small></div>
+  <div class="flow-step flow-human"><b>Human review</b><small>read and correct every field</small></div>
+  <div class="flow-step"><b>DOME Registry entry</b><small>deposited and citable</small></div>
+</div>
+
+<h3 id="under-the-hood">Under the hood</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Model</strong></td>
+<td>Mistral Small 3.1 24B Instruct (2503.10) — an intermediate-sized LLM</td>
+</tr>
+<tr>
+<td><strong>Why that model</strong></td>
+<td>Chosen to deliver results at speed while remaining highly capable at text summarisation and structuring — the trade-off that makes corpus-scale annotation affordable</td>
+</tr>
+<tr>
+<td><strong>Throughput</strong></td>
+<td>~2 minutes per annotation from PDF submission, varying with document size</td>
+</tr>
+<tr>
+<td><strong>Benchmark</strong></td>
+<td>n = 222 publications (Dataset A)</td>
+</tr>
+<tr>
+<td><strong>Prompt refinement</strong></td>
+<td>System prompts improved from v0 to v2 through expert curator observation on a subset of n = 30</td>
+</tr>
+<tr>
+<td><strong>Agreement with humans</strong></td>
+<td>BERTScore against human annotations mostly falls in the <strong>0.35–0.50</strong> interquartile range (1.0 = identical semantic match), indicating stable semantic similarity</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Reading the BERTScore honestly</p>
+<p>A BERTScore IQR of 0.35–0.50 indicates <em>stable semantic similarity</em>, not
+equivalence. Copilot reliably lands in the right territory for a field; it does
+not reliably produce the exact statement an expert curator would write. That is
+precisely why the human review step exists — and why the reported number is
+worth stating plainly rather than glossing.</p>
+</div>
+<h2 id="where-humans-stay-in-the-loop">Where humans stay in the loop</h2>
+<p>Copilot drafts; a person decides. In practice the review effort concentrates in
+predictable places:</p>
+<ul>
+<li><strong>Fields the paper never states.</strong> Copilot works from the manuscript. If the
+  paper is silent on redundancy reduction between splits (DOME 1.3), the correct
+  output is a gap — and a draft that confidently fills it is the thing you are
+  reviewing <em>for</em>.</li>
+<li><strong>Numbers.</strong> Dataset sizes, parameter counts and metric values are worth
+  checking against the source every time.</li>
+<li><strong>Availability fields.</strong> URLs, licences and repository links (1.4, 2.8, 3.4,
+  4.5) need verification that the resource actually exists and is accessible.</li>
+<li><strong>Anything that would change a reader’s judgement.</strong> If a field would alter
+  how someone assesses the method, read the paper’s own words for it.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Never deposit an unreviewed annotation</p>
+<p>A machine-drafted DOME entry that nobody has checked is worse than no entry:
+it looks authoritative and carries the Registry’s credibility. The Registry’s
+<code>isAiGenerated</code> flag exists so that provenance is recorded — it is not a
+substitute for review.</p>
+</div>
+<hr>
+<h2 id="sources-and-further-reading">Sources and further reading</h2>
+<ul>
+<li><strong>Try it</strong>: <a href="https://dome-copilot.ifca.es/">https://dome-copilot.ifca.es/</a> (shared workshop login on the <a href="../../assets/">Session Assets</a> page)</li>
+<li><strong>The preprint</strong>: Farrell G, Attafi OA, Fragkouli S-C, Heredia I, Fernández Tobías S, Harrison M, Hermjakob H, Jeffryes M, Obregón Ruiz M, Pearce M, Pechlivanis N, López García A, Psomopoulos F, Tosatto SCE. <em>DOME Copilot: Making transparency and reproducibility for artificial intelligence methods simple.</em> bioRxiv, 19 April 2026. <a href="https://doi.org/10.64898/2026.04.16.718888">doi:10.64898/2026.04.16.718888</a> <sup id="fnref2:farrell2026copilot"><a class="footnote-ref" href="#fn:farrell2026copilot">1</a></sup></li>
+<li><strong>Source code</strong>: <a href="https://github.com/IFCA-Advanced-Computing/dome-copilot">IFCA-Advanced-Computing/dome-copilot</a></li>
+<li><strong>Technical issues</strong>: <a href="mailto:contact@dome-ml.org">contact@dome-ml.org</a></li>
+</ul>
+<hr>
+<p><strong>Next:</strong> <a href="../chapter_04_osai/">Chapter 4 — Open and Sustainable AI (OSAI)</a></p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:farrell2026copilot">
+<p>Gavin Farrell, Omar Abdelghani Attafi, Styliani-Christina Fragkouli, Ignacio Heredia, Saul Fernández Tobías, Melissa Harrison, Henning Hermjakob, Matt Jeffryes, Marta Obregón Ruiz, Matt Pearce, Nikos Pechlivanis, Alvaro López García, Fotis Psomopoulos, and Silvio C. E. Tosatto. DOME copilot: making transparency and reproducibility for artificial intelligence methods simple. <em>bioRxiv</em>, 2026. Preprint, posted 19 April 2026. <a href="https://doi.org/10.64898/2026.04.16.718888">doi:10.64898/2026.04.16.718888</a>. <a class="footnote-backref" href="#fnref:farrell2026copilot" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2:farrell2026copilot" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../chapter_02_registry/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. The DOME Registry">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2. The DOME Registry
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter_04_osai/" class="md-footer__link md-footer__link--next" aria-label="Next: 4. Open &amp; Sustainable AI (OSAI)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                4. Open & Sustainable AI (OSAI)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      By Gavin Farrell, University of Padua / BioComputingUP (CC BY-SA 4.0) &middot; Built with the <a href="https://doi.org/10.5281/zenodo.7913092">ELIXIR Training Lesson Template</a> (CC BY-SA 4.0)
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.footer", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
